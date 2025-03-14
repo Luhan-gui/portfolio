@@ -1,0 +1,16 @@
+body {
+    background-color: #13121a;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    font-family: 'Playfair Display', serif;
+    z-index: 1000;
+}
