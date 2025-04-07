@@ -1,89 +1,128 @@
 
-.playfair-display-nom {
-    font-family: "Playfair Display", serif;
-    font-optical-sizing: auto;
-    font-weight: 24;
-    font-style: normal;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 body {
     background-color: #13121a;
     color: #fff;
     font-family: "Playfair Display", serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 20px;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 1.5em;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li {
-    margin: 0;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: inherit;
-}
-
-nav ul li a img {
-    width: 24px;
-    height: 24px;
-}
-
-main {
     text-align: center;
+
+}
+header {
+    padding: 0 25%;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    position: sticky;
+    top: 0;
+    background-color: #13121a;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}
+ul li{
+    list-style: none;
+    width: 50%;
+}
+ul li:first-child {
+    margin-left: 500px;
+}
+li img{
+    padding: 20px;
+    width: 30%;
+    height: auto;
 }
 
-.intro h1 {
-    font-size: 2em;
-    margin-bottom: 10px;
+header > ul > li{
+    margin-right: 10px;
 }
 
-.intro p {
-    font-size: 1.2em;
-    margin: 5px 0;
+.intro h1{
+    font-family: "Playfair Display", serif;
+    font-weight: 100;
+    font-size: 48px;
+}
+.intro p{
+    font-family: "Playfair Display", serif;
+    font-weight: 100;
+    font-size: 32px;
 }
 
 .intro img {
-    width: 300px;
+    width: 40%;
+    height: auto;
     margin-top: 20px;
+    padding : 0 30%;
 }
 
-button {
-    background-color: #5A3779;
+.cv, .propos {
+    display: inline-block;
+    background-color: #494175;
     color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 35px;
     border: none;
-    padding: 10px 20px;
-    margin: 10px;
+    border-radius: 20px;
+    text-decoration: none;
     cursor: pointer;
-    font-size: 1em;
-    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    width: 400px;
+    text-align: center;
 }
 
-button:hover {
-    background-color: #452c5a;
+.cv:hover, .propos:hover {
+    background-color: #4a3b6b;
+}
+
+.propos {
+    background-color: #FAAC53;
+}
+
+.a_propos {
+    display: flex;
+    flex-direction: column;
+    background-color: #494175;
+    width: 50%;
+    margin: 20px 25% 0px 25%;
+    border-radius: 50px;
+}
+
+.close_pp img{
+    position: relative;
+    left: 40%;
+    top: 25px;
+    height: auto;
+    width: 75px;
+}
+
+.a_propos h1{
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    font-size: 32px;
+    margin-top: 20px;
+    color : #FAAC53;
+}
+.a_propos p{
+    font-family: "Playfair Display", serif;
+    font-weight: 100;
+    font-size: 32px;
+    margin: 20px 10%;
+}
+.presentation{
+    display: flex;
+    flex-direction: row;
+    margin-right: 5%;
+}
+.competences {
+    background-color: #D9D9D9;
+    height: auto;
+    width: 25%;
+    border-radius: 25px;
+    color: #FAAC53;
 }
