@@ -16,6 +16,7 @@ header {
     position: sticky;
     top: 0;
     background-color: #13121a;
+    z-index: 3;
 }
 ul{
     display: flex;
@@ -76,12 +77,15 @@ header > ul > li{
     text-align: center;
 }
 
-.cv:hover, .propos:hover {
-    background-color: #4a3b6b;
+.cv:hover {
+    background-color: #6a5b8b;
+}
+.propos:hover {
+    background-color: #FAAC53;
 }
 
 .propos {
-    background-color: #FAAC53;
+    background-color: #FA8C23;
 }
 
 .a_propos {
@@ -93,12 +97,31 @@ header > ul > li{
     border-radius: 50px;
 }
 
-.close_pp img{
+.a_propos {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    display: none;
+}
+
+.a_propos img {
+    width: 100%;
+    height: auto;
+    border-radius: 50px 50px 0 0;
+}
+
+.a_propos.visible {
+    opacity: 1;
+    display: block;
+}
+
+.close_pp img {
     position: relative;
-    left: 40%;
+    left: 45%;
     top: 25px;
     height: auto;
     width: 75px;
+    z-index: 2; 
+    cursor: pointer;
 }
 
 .a_propos h1{
@@ -109,20 +132,323 @@ header > ul > li{
     color : #FAAC53;
 }
 .a_propos p{
-    font-family: "Playfair Display", serif;
-    font-weight: 100;
-    font-size: 32px;
-    margin: 20px 10%;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: white;
+    margin: 20px;
 }
 .presentation{
     display: flex;
     flex-direction: row;
     margin-right: 5%;
+    justify-content: center;
+    align-items: center;
 }
-.competences {
+
+.presentation img {
+    width: 25%;
+    height: auto;
+    border-radius: 50%;
+    margin-right: 5%;
+}
+
+.softskills {
     background-color: #D9D9D9;
     height: auto;
     width: 25%;
     border-radius: 25px;
     color: #FAAC53;
+    padding: 1%;
+    margin: 5%;
 }
+.presentation :last-child{
+    margin-right: 0;
+}
+
+
+.pdroite{
+    text-align: end;
+}
+
+.pgauche{
+    text-align: start;
+}
+
+.affcomp {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.competences:first-of-type{
+    margin-bottom: 100px;
+}
+.competences:first-child {
+    margin-left: 30%;
+}
+.competences:last-child {
+    margin-right: 30%;
+}
+
+.hardskills h1{
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    font-size: 36px;
+    color : white;
+    margin-top: 20px;
+}
+
+.hardskills h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 28px;
+    color : #FA8C23;
+    margin-top: 20px;
+}
+
+.competences {
+    background-color: #494175;
+    width: 450px;
+    height: 225px;
+    border-radius: 25px;
+    color : white;
+    font-family: "Montserrat", sans-serif;
+}
+.figcomp{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.competences img {
+    width: 30%;
+    height: 30%;
+}
+
+.projets h1{
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    font-size: 36px;
+    color : white;
+    margin-top: 20px;
+}
+
+.projets h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 28px;
+    color : #FA8C23;
+    margin-top: 20px;
+}
+
+.aff_proj {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 30%;
+    margin-bottom: 50px;
+}
+
+.aff_proj div {
+    background-color: #494175;
+    width: 285px;
+    height: 305px;
+    font-family: "Montserrat", sans-serif;
+    color: #FA8C23;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 24px;
+}
+.proj1_ferme img {
+    width: 100%;
+    height: 50%;
+    border-radius: 25px;
+    margin-bottom: 25px;
+}
+
+.proj2_ferme img{
+    width: 75%;
+    height: auto;
+    border-radius: 25px;
+    margin-bottom: 15px;
+}
+
+.aff_proj div:hover{
+    background-color: #6a5b8b;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #494175;
+    color: #FA8C23;
+    font-family: "Playfair Display", serif;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+.proj1, .proj2, .proj3{
+    background-color: #494175;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    width: 50%;
+    height: auto;
+    margin: 0 25%;
+    margin-bottom: 50px;
+    border-radius: 25px;
+    padding-bottom: 40px;
+    font-size: 24px;
+}
+
+.proj1 a {
+    color: #FAAC53;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.proj1 a:hover {
+    color: #6a5b8b;
+}
+a:visited {
+    color: #FAAC53; /* Change to your desired color */
+}
+
+
+.proj1 h1, .proj2 h1 {
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    font-size: 36px;
+    color : white;
+    margin-top: 20px;
+}
+.proj1 img, .proj2 img {
+    width: 75%;
+    height: auto;
+    border-radius: 25px;
+    margin-bottom: 25px;
+    
+}
+.close_proj img {
+    position: relative;
+    left: 45%;
+    top: 25px;
+    height: auto;
+    width: 75px;
+    z-index: 2; 
+    cursor: pointer;
+}
+.a_propos, .proj1 ,.proj2 {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    display: none;
+}
+
+
+.a_propos.visible, .proj1.visible {
+    display: block;
+    opacity: 1;
+}
+
+
+.aff_proj {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+
+.aff_proj.hidden {
+    opacity: 0;
+    display: none;
+}
+
+
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .prev {
+    left: 25%;  
+}
+  
+  .next {
+    right: 25%;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+    margin-left: 25%;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }

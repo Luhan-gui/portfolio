@@ -9,6 +9,32 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <style>
+        /* Style pour cacher la section par défaut */
+        .a_propos, .proj1, .proj2, .proj3 {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            display: none; /* Initialement caché */
+        }
+
+        /* Classe pour l'animation de fondu apparition */
+        .a_propos.visible, .proj1.visible, .proj2.visible, .proj3.visible {
+            display: block; /* Affiché lorsque visible */
+            opacity: 1;
+        }
+
+        /* Style pour cacher la section aff_proj */
+        .aff_proj {
+            opacity: 1;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        /* Classe pour cacher la section aff_proj */
+        .aff_proj.hidden {
+            opacity: 0;
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -17,7 +43,6 @@
             <ul>
                 <li><a href="https://www.linkedin.com/in/luhan-guiggia-milon-b15401354/"><img src="image/linkedinwhite.png" alt="bouton linkedin "></a></li>
                 <li><a href="https://github.com/Luhan-gui"><img src="image/githubwhite.png" alt="bouton github"></a></li>
-                <li><a href="contact.html"><img src="image/moonwhite.png" alt="bouton dark/light mode"></a></li>
             </ul>
         </nav>
     </header>
@@ -32,101 +57,237 @@
             <button class="propos">A propos de moi</button>
         </section>
         <section class="a_propos">
-            <a href="#close" class="close_pp"><img src="image/croix.png" alt="bouton fermeture a propos"></a>
+            <div class="close_pp"><img src="image/croix.png" alt="bouton fermeture a propos"></div>
             <h1>A propos de moi</h1>
             <section class="presentation">
-                <section class="competences">
+                <section class="softskills">
                     <img src="image/eye.png" alt="Oeil">
                     <h2>Capacité d'observation</h2>
                 </section>
-                <section class="competences">
+                <section class="softskills">
                     <img src="image/pen.png" alt="Plume de Stylo">
                     <h2>Créatif</h2>
                 </section>
-                <section class="competences">
+                <section class="softskills">
                     <img src="image/zen.png" alt="Ying Yang">
                     <h2>Maîtrise de Soi</h2>
                 </section>
             </section>
-            <p>A 18 ans, je suis actuellement en étude pour travailler dans le développement logiciel et plus tard j’espère avec du travail dans le domaine du jeu vidéo. </p>
+            <p class="pdroite">A 18 ans, je suis actuellement en étude pour travailler dans le développement logiciel et plus tard j’espère avec du travail dans le domaine du jeu vidéo. </p>
             <img src="image/perfection.png" alt="Luhan visant avec une fléchette une cible (la perfection)">
-            <p>Durant mon cursus au BUT Informatique à l’IUT de Lannion, j’apprends les bases de plusieurs types de languages tels que le bas niveau (C, Assembleur), le Web (HTML,CSS), la Base de Données (PostgreSQL, Tutorial D), le scripting (Bash, PHP) et l’Orienté Objet (Java).</p>
+            <p class="pgauche">Durant mon cursus au BUT Informatique à l’IUT de Lannion, j’apprends les bases de plusieurs types de languages tels que le bas niveau (C, Assembleur), le Web (HTML,CSS), la Base de Données (PostgreSQL, Tutorial D), le scripting (Bash, PHP) et l’Orienté Objet (Java) afin de devenir un développeur Full Stack.</p>
             <img src="image/programmation.png" alt="Luhan devant un écran de code">
-            <p>De mon côté, j’apprend à utiliser des logiciels pour consevoir mon travail (Figma), gérer mes projets(GIT, Teams), et présenter mes travaux dans divers formats (Powerpoint, Premiere Pro, Photoshop).</p>
-            <p>Mes hobbies m’aident également pour que je continue de m’améliorer au quotidien. Je pratique la photographie occasionnellement avec un Panasonic DMC-FZ48, et utilise le logiciel Lightroom pour retoucher mes photos.</p>
+            <p class="pdroite">De mon côté, j’apprend à utiliser des logiciels pour concevoir mon travail (Figma), gérer mes projets (GIT, Teams), et présenter mes travaux dans divers formats (Powerpoint, Premiere Pro, Photoshop).</p>
+            <p class="pgauche">Mes hobbies m’aident également pour que je continue de m’améliorer au quotidien. Je pratique la photographie occasionnellement avec un Panasonic DMC-FZ48, et utilise le logiciel Lightroom pour retoucher mes photos.</p>
             <img src="image/photographie.png" alt="Luhan prenant une photo d'un paysage">
-            <p>J’ai pratiqué compétitivement du Sport plus jeune tels que le Judo et l'Athlètisme, mais j’ai décidé de passer au côté loisir de celui-ci pour me consacrer a mes études.</p>
+            <p class="pdroite">J’ai pratiqué compétitivement du Sport plus jeune tels que le Judo et l'Athlètisme, mais j’ai décidé de passer au côté loisir de celui-ci pour me consacrer a mes études.</p>
         </section>
         <section class="hardskills">
             <h1>Mes compétences</h1>
             <h2>Hard Skills</h2>
-            <section>
-                <h2>Programmation</h2>
-                <figure>
-                    <img src="image/c.png" alt="logo c">
-                    <figcaption>Les bases</figcaption>
-                </figure>
-                <figure>
-                    <img src="image/java.png" alt="logo java">
-                    <figcaption>Les bases</figcaption>
-                </figure>
+            <section class="affcomp">
+                <section class="competences">
+                    <h2>Programmation</h2>
+                    <section class="figcomp">
+                        <figure>
+                            <img src="image/c.png" alt="logo c">
+                            <figcaption>Les bases</figcaption>
+                        </figure>
+                        <figure>
+                            <img class="java" src="image/java.png" alt="logo java">
+                            <figcaption>Les bases</figcaption>
+                        </figure>
+                    </section>
+                </section>
+                <section class="competences">
+                    <h2>Développement Web</h2>
+                    <section class="figcomp">
+                        <figure>
+                            <img src="image/htmlcss.png" alt="logo html/css">
+                            <figcaption>Intermédiaire</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="image/bootstrap.png" alt="logo Bootstrap">
+                            <figcaption>Les bases</figcaption>
+                        </figure>
+                    </section>
+                </section>
             </section>
-            <section>
-                <h2>Développement Web</h2>
-                <figure>
-                    <img src="image/htmlcss.png" alt="logo html/css">
-                    <figcaption>Intermédiaire</figcaption>
-                </figure>
-                <figure>
-                    <img src="image/bootstrap.png" alt="logo Bootstrap">
-                    <figcaption>Les bases</figcaption>
-                </figure>
-            </section>
-            <section>
-                <h2>Base de Données</h2>
-                <figure>
-                    <img src="image/sql.png" alt="logo PostgreSQL">
-                    <figcaption>Les bases</figcaption>
-                </figure>
-            </section>
-            <section>
-                <h2>Scripting</h2>
-                <figure>
-                    <img src="image/bash.png" alt="logo bash">
-                    <figcaption>Les bases</figcaption>
-                </figure>
-                <figure>
-                    <img src="image/php.png" alt="logo php">
-                    <figcaption>Les bases</figcaption>
-                </figure>
+            <section class="affcomp">
+                <section class="competences">
+                    <h2>Base de Données</h2>
+                    <section class="figcomp">
+                        <figure>
+                            <img src="image/sql.png" alt="logo PostgreSQL">
+                            <figcaption>Les bases</figcaption>
+                        </figure>
+                    </section>
+                </section>
+                <section class="competences">
+                    <h2>Scripting</h2>
+                    <section class="figcomp">
+                        <figure>
+                            <img src="image/bash.png" alt="logo bash">
+                            <figcaption>Les bases</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="image/php.png" alt="logo php">
+                            <figcaption>Les bases</figcaption>
+                        </figure>
+                    </section>
+                </section>
             </section>
         </section>
         <section class="projets">
             <h1>Mon Portfolio</h1>
             <h2>Mes projets</h2>
-            <div>
-                <figure>
-                    <img src="" alt="Image d'un site web">
-                    <figcaption>Site Web</figcaption>
-                </figure>
-            </div>
-            <div>
-                <figure>
-                    <img src="" alt="Image d'une application">
-                    <figcaption>Application</figcaption>
-                </figure>
-            </div>
-            <div>
-                <figure>
-                    <img src="" alt="Image d'un jeu vidéo">
-                    <figcaption>Jeu Vidéo</figcaption>
-                </figure>
-            </div>
-            
+            <section class="aff_proj">
+                <div class="proj1_ferme">
+                    <figure>
+                        <img src="image/petit_portfolio.png" alt="Capture d'écran du Portfolio">
+                        <figcaption>Site Web</figcaption>
+                    </figure>
+                </div>
+                <div class="proj2_ferme">
+                    <figure>
+                        <img src="image/IMG_3161.jpg" alt="Image d'un Flipper de Table">
+                        <figcaption>Jeu de Plateau</figcaption>
+                    </figure>
+                </div>
+                <div class="proj3_ferme">
+                    <figure>
+                        <img src="" alt="Image d'un jeu vidéo">
+                        <figcaption>Jeu Vidéo</figcaption>
+                    </figure>
+                </div>
+            </section>
+            <section class="proj1">
+                <div class="close_proj"><img src="image/croix.png" alt="bouton fermeture projet"></div>
+                <h1>Création du Portfolio</h1>
+                <img src="image/grand_portfolio.png" alt="Image plein écran du Portfolio">
+                <p>Ce site a été réalisé en HTML, CSS et Javascript.</p>
+                <p><a href="https://github.com/Luhan-gui/portfolio">Lien Github</a></p>
+            </section>
+            <section class="proj2">
+                <div class="close_proj"><img src="image/croix.png" alt="bouton fermeture projet"></div>
+                <h1>Création d'un Flipper de Table</h1>
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                      <div class="numbertext">1 / 2</div>
+                      <img src="image/IMG_3161.jpg" style="width:50%">
+                      <div class="text">Flipper de table</div>
+                    </div>
+                    <div class="mySlides fade">
+                      <div class="numbertext">2 / 2</div>
+                      <img src="image/IMG_3157.png" style="width:50%">
+                      <div class="text">Affiche</div>
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                  </div>
+                  <br>
+                  <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                  </div>
+                <p>Le but de ce flipper de table était de concevoir un flipper peu encombrant, accessible.</p>
+                <p>Il a été réalisé en C++ et utilise une carte Arduino MEGA pour le faire fonctionner.</p>
+                <p>Mon travail a été de faire fonctionner toutes les parties du flipper(bumper,écran,etc...) ainsi que de coder le système de jeu.</p>
+                <p>Le flipper a été conçu pour être transportable et facilement démontable.</p>
+                <p>Nous avons participé avec mon équipe aux Olympiades des Sciences de l'Ingénieur, c'était une très bonne expérience avec des choses à en tirer.</p>
+            </section>
+            <section class="proj3">
+                <div class="close_proj"><img src="image/croix.png" alt="bouton fermeture projet"></div>
+                <h1>Titre du Projet 3</h1>
+                <img src="image/grand_portfolio.png" alt="Image plein écran du Projet 3">
+                <p>Description du Projet 3.</p>
+                <p><a href="https://github.com/Luhan-gui/portfolio">Lien Github</a></p>
+            </section>
         </section>
         <footer>
-            Site web réalisé par Luhan Guiggia--Milon
-            Hébergé par OVHcloud
+            <p>Merci de votre visite !</p>
+            <p>Si jamais vous avez des questions, n'hésitez pas à me contacter par mail !</p>
+            <p>Site web réalisé par Luhan Guiggia--Milon</p>
         </footer>
+    </main>
+    <script>
+        // JavaScript pour gérer l'affichage de la section "À propos" avec animation
+        document.querySelector('.propos').addEventListener('click', function() {
+            const section = document.querySelector('.a_propos');
+            section.style.display = 'block'; // Afficher l'élément pour que l'animation fonctionne
+            setTimeout(() => {
+                section.classList.add('visible');
+            }, 0); // Ajouter la classe après un court délai pour s'assurer que l'élément est affiché
+        });
+
+        document.querySelector('.close_pp').addEventListener('click', function() {
+            const section = document.querySelector('.a_propos');
+            section.classList.remove('visible');
+            // Attendre la fin de l'animation pour cacher complètement l'élément
+            section.addEventListener('transitionend', function handler() {
+                section.style.display = 'none';
+                section.removeEventListener('transitionend', handler);
+            }, { once: true });
+        });
+
+        // JavaScript pour gérer l'affichage des sections de projet avec animation
+        document.querySelectorAll('.aff_proj div').forEach(projFerme => {
+            projFerme.addEventListener('click', function() {
+                const projId = this.className.split('_')[0];
+                const sectionProj = document.querySelector(`.${projId}`);
+                const sectionAffProj = document.querySelector('.aff_proj');
+
+                sectionProj.style.display = 'block'; // Afficher l'élément pour que l'animation fonctionne
+                sectionAffProj.classList.add('hidden'); // Cacher la section aff_proj
+
+                setTimeout(() => {
+                    sectionProj.classList.add('visible');
+                }, 0); // Ajouter la classe après un court délai pour s'assurer que l'élément est affiché
+            });
+        });
+
+        document.querySelectorAll('.close_proj').forEach(closeProj => {
+            closeProj.addEventListener('click', function(event) {
+                event.preventDefault();
+                const sectionProj = this.closest('section');
+                const sectionAffProj = document.querySelector('.aff_proj');
+
+                sectionProj.classList.remove('visible');
+                // Attendre la fin de l'animation pour cacher complètement l'élément
+                sectionProj.addEventListener('transitionend', function handler() {
+                    sectionProj.style.display = 'none';
+                    sectionAffProj.classList.remove('hidden'); // Afficher à nouveau la section aff_proj
+                    sectionProj.removeEventListener('transitionend', handler);
+                }, { once: true });
+            });
+        });
+
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+        }
+    </script>
 </body>
 </html>
