@@ -22,31 +22,37 @@ header {
     top: 0;
     background-color: #13121a;
     z-index: 3;
+    font-size: 10px;
+    justify-content: space-between;
 }
-ul{
+
+header h1 {
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    color: white;
+    margin: 0;
+    padding: 20px 0;
+    white-space: nowrap;
+}
+
+ul {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
     padding: 0;
     margin: 0;
 }
-ul li{
+
+ul li {
     list-style: none;
-    width: 50%;
+    margin-left: 10px;
 }
-ul li:first-child {
-    margin-left: 500px;
-}
-li img{
+
+li img {
     padding: 20px;
-    width: 30%;
+    width: 30px;
     height: auto;
 }
-
-header > ul > li{
-    margin-right: 10px;
-};
-
 
 /* Intro */
 .intro h1,
@@ -56,15 +62,15 @@ header > ul > li{
 }
 
 .intro h1 {
-    font-size: 48px;
+    font-size: 28px;
 }
 
 .intro p {
-    font-size: 32px;
+    font-size: 18px;
 }
 
 .intro img {
-    width: 40%;
+    width: 35%;
     height: auto;
     margin-top: 20px;
     padding: 0 30%;
@@ -76,23 +82,37 @@ header > ul > li{
     background-color: #494175;
     color: #fff;
     font-family: "Montserrat", sans-serif;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 600;
-    padding: 35px;
+    padding: 20px;
     border: none;
-    border-radius: 20px;
+    border-radius: 15px;
     text-decoration: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    width: 400px;
+    width: 280px;
     text-align: center;
 }
 
-.cv:hover { background-color: #6a5b8b; }
-.propos { background-color: #FA8C23; }
-.propos:hover { background-color: #FAAC53; }
-.parcours { background-color: #4e0869; }
-.parcours:hover { background-color: #6A2C93; }
+.cv:hover {
+    background-color: #6a5b8b;
+}
+
+.propos {
+    background-color: #FA8C23;
+}
+
+.propos:hover {
+    background-color: #FAAC53;
+}
+
+.parcours {
+    background-color: #4e0869;
+}
+
+.parcours:hover {
+    background-color: #6A2C93;
+}
 
 /* Sections à propos et parcours */
 .a_propos, .mon_parcours {
@@ -100,8 +120,8 @@ header > ul > li{
     flex-direction: row;
     background-color: #494175;
     width: 50%;
-    margin: 20px 25% 0 25%;
-    border-radius: 50px;
+    margin: 10px 25% 0 25%;
+    border-radius: 20px;
 }
 
 .a_propos {
@@ -115,17 +135,17 @@ header > ul > li{
     display: block;
 }
 
-.a_propos img {
-    width: 100%;
+.perf {
+    width: 90%;
     height: auto;
-    border-radius: 50px 50px 0 0;
+    border-radius: 20px;
 }
 
 .close_pp img {
     position: relative;
     left: 45%;
-    top: 25px;
-    width: 75px;
+    top: 15px;
+    width: 40px;
     cursor: pointer;
     z-index: 2;
 }
@@ -133,17 +153,17 @@ header > ul > li{
 .a_propos h1 {
     font-family: "Playfair Display", serif;
     font-weight: 600;
-    font-size: 32px;
-    margin-top: 20px;
+    font-size: 24px;
+    margin-top: 10px;
     color: #FAAC53;
 }
 
 .a_propos p {
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 16px;
     color: white;
-    margin: 20px;
+    margin: 10px;
 }
 
 /* Présentation */
@@ -156,10 +176,10 @@ header > ul > li{
 }
 
 .presentation img {
-    width: 25%;
+    margin-top: 5px;
+    width: 20%;
     height: auto;
     border-radius: 50%;
-    margin-right: 5%;
 }
 
 .presentation :last-child {
@@ -168,16 +188,29 @@ header > ul > li{
 
 .softskills {
     background-color: #D9D9D9;
-    width: 25%;
+    width: 300px;
     border-radius: 25px;
     color: #FAAC53;
-    padding: 1%;
-    margin: 5%;
+    height: 100px;
+    margin-left: 3%;
+}
+
+.softskills h2 {
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #FAAC53;
+    margin-bottom: 10px;
 }
 
 /* Alignements */
-.pdroite { text-align: end; }
-.pgauche { text-align: start; }
+.pdroite {
+    text-align: end;
+}
+
+.pgauche {
+    text-align: start;
+}
 
 /* Compétences */
 .affcomp {
@@ -188,16 +221,24 @@ header > ul > li{
 
 .competences {
     background-color: #494175;
-    width: 450px;
-    height: 225px;
-    border-radius: 25px;
+    width: 300px;
+    height: 150px;
+    border-radius: 15px;
     color: white;
     font-family: "Montserrat", sans-serif;
 }
 
-.competences:first-of-type { margin-bottom: 100px; }
-.competences:first-child { margin-left: 30%; }
-.competences:last-child { margin-right: 30%; }
+.competences:first-of-type {
+    margin-bottom: 60px;
+}
+
+.competences:first-child {
+    margin-left: 25%;
+}
+
+.competences:last-child {
+    margin-right: 25%;
+}
 
 .figcomp {
     display: flex;
@@ -207,35 +248,35 @@ header > ul > li{
 }
 
 .competences img {
-    width: 30%;
-    height: 30%;
+    width: 20%;
+    height: 20%;
 }
 
 .hardskills h1,
 .projets h1 {
     font-family: "Playfair Display", serif;
     font-weight: 600;
-    font-size: 36px;
+    font-size: 28px;
     color: white;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .hardskills h2,
 .projets h2 {
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
-    font-size: 28px;
+    font-size: 22px;
     color: #FA8C23;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 /* Projets */
 .aff_proj {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    margin: 0 30%;
-    margin-bottom: 50px;
+    justify-content: space-between; /* Align projects to the center */
+    margin: 0 25%; /* Center the container horizontally */
+    margin-bottom: 30px;
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
 }
@@ -247,13 +288,13 @@ header > ul > li{
 
 .aff_proj div {
     background-color: #494175;
-    width: 285px;
-    height: 305px;
+    width: 200px;
+    height: 250px;
     font-family: "Montserrat", sans-serif;
     color: #FA8C23;
-    border-radius: 25px;
+    border-radius: 20px;
     font-weight: 600;
-    font-size: 24px;
+    font-size: 18px;
     transition: background-color 0.3s;
 }
 
@@ -266,24 +307,24 @@ header > ul > li{
 .proj1 img, .proj2 img {
     width: 100%;
     height: auto;
-    border-radius: 25px;
-    margin-bottom: 25px;
+    border-radius: 20px;
+    margin-bottom: 20px;
 }
 
 .proj2_ferme img {
-    width: 75%;
-    margin-bottom: 15px;
+    width: 70%;
+    margin-bottom: 10px;
 }
 
 .proj1, .proj2, .proj3 {
     background-color: #494175;
     font-family: "Montserrat", sans-serif;
     color: white;
-    width: 50%;
-    margin: 0 25% 50px 25%;
-    border-radius: 25px;
-    padding-bottom: 40px;
-    font-size: 24px;
+    width: 40%;
+    margin: 0 auto 30px auto; /* Center each project horizontally */
+    border-radius: 20px;
+    padding-bottom: 30px;
+    font-size: 18px;
     height: auto;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
@@ -298,9 +339,9 @@ header > ul > li{
 .proj1 h1, .proj2 h1 {
     font-family: "Playfair Display", serif;
     font-weight: 600;
-    font-size: 36px;
+    font-size: 28px;
     color: white;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .proj1 a {
@@ -316,8 +357,8 @@ header > ul > li{
 .close_proj img {
     position: relative;
     left: 45%;
-    top: 25px;
-    width: 75px;
+    top: 20px;
+    width: 50px;
     cursor: pointer;
     z-index: 2;
 }
@@ -374,7 +415,10 @@ footer {
     user-select: none;
 }
 
-.prev { left: 25%; }
+.prev {
+    left: 25%;
+}
+
 .next {
     right: 25%;
     border-radius: 3px 0 0 3px;
@@ -424,6 +468,74 @@ footer {
 }
 
 @keyframes fade {
-    from { opacity: .4 }
-    to { opacity: 1 }
+    from {
+        opacity: .4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Style pour cacher la section par défaut */
+.a_propos, .proj1, .proj2, .proj3, .mon_parcours {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    display: none;
+}
+
+/* Classe pour l'animation de fondu apparition */
+.a_propos.visible, .proj1.visible, .proj2.visible, .proj3.visible, .mon_parcours.visible {
+    display: block;
+    opacity: 1;
+}
+
+/* Style pour cacher la section aff_proj */
+.aff_proj {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Classe pour cacher la section aff_proj */
+.aff_proj.hidden {
+    opacity: 0;
+    display: none;
+}
+
+/* Divers */
+.img_app {
+    width: 40%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.a_propos div {
+    padding-bottom: 50px;
+}
+
+.judo {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 50px;
+}
+
+.judo img {
+    width: 30%;
+    height: auto;
+}
+
+.judo p {
+    margin-left: 67%;
+}
+
+.cartoon{
+    width: 30%;
+    height: auto;
+}
+
+.slideshow-container img {
+    width: 50%;
+}
+
+.div1 {
+    text-align: center;
 }

@@ -9,32 +9,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-    <style>
-        /* Style pour cacher la section par défaut */
-        .a_propos, .proj1, .proj2, .proj3 {
-            opacity: 0;
-            transition: opacity 0.5s ease-in-out;
-            display: none; /* Initialement caché */
-        }
-
-        /* Classe pour l'animation de fondu apparition */
-        .a_propos.visible, .proj1.visible, .proj2.visible, .proj3.visible {
-            display: block; /* Affiché lorsque visible */
-            opacity: 1;
-        }
-
-        /* Style pour cacher la section aff_proj */
-        .aff_proj {
-            opacity: 1;
-            transition: opacity 0.5s ease-in-out;
-        }
-
-        /* Classe pour cacher la section aff_proj */
-        .aff_proj.hidden {
-            opacity: 0;
-            display: none;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -75,25 +49,31 @@
                 </section>
             </section>
             <p class="pdroite">A 18 ans, je suis actuellement en étude pour travailler dans le développement logiciel et plus tard j’espère avec du travail dans le domaine du jeu vidéo. </p>
-            <img src="image/perfection.png" alt="Luhan visant avec une fléchette une cible (la perfection)">
+            <img class="perf" src="image/perfection.png" alt="Luhan visant avec une fléchette une cible (la perfection)">
             <p class="pgauche">Durant mon cursus au BUT Informatique à l’IUT de Lannion, j’apprends les bases de plusieurs types de languages tels que le bas niveau (C, Assembleur), le Web (HTML,CSS), la Base de Données (PostgreSQL, Tutorial D), le scripting (Bash, PHP) et l’Orienté Objet (Java) afin de devenir un développeur Full Stack.</p>
-            <img src="image/programmation.png" alt="Luhan devant un écran de code">
+            <img class="img_app" src="image/programmation.jpg"  alt="Luhan devant un écran de code">
             <p class="pdroite">De mon côté, j’apprend à utiliser des logiciels pour concevoir mon travail (Figma), gérer mes projets (GIT, Teams), et présenter mes travaux dans divers formats (Powerpoint, Premiere Pro, Photoshop).</p>
+            <div></div>
             <p class="pgauche">Mes hobbies m’aident également pour que je continue de m’améliorer au quotidien. Je pratique la photographie occasionnellement avec un Panasonic DMC-FZ48, et utilise le logiciel Lightroom pour retoucher mes photos.</p>
-            <img src="image/photographie.png" alt="Luhan prenant une photo d'un paysage">
+            <img class="img_app" src="image/photographie.jpg"  alt="Luhan prenant une photo d'un paysage">
             <p class="pdroite">J’ai pratiqué compétitivement du Sport plus jeune tels que le Judo et l'Athlètisme, mais j’ai décidé de passer au côté loisir de celui-ci pour me consacrer a mes études.</p>
+            <section class="judo">
+                <p>"Et je m'accroche à la vie !" - Luhan</p>
+                <img src="image/judo.png" alt="Luhan 10 ans qui fait du judo">
+            </section>
         </section>
         <section class="mon_parcours">
+            <div class="close_pp"><img src="image/croix.png" alt="bouton fermeture a propos"></div>
             <h1>Mon Parcours</h1>
-            <img src="" alt="Luhan avec une carte et un sac à dos">
+            <img class="cartoon" src="image/parcours.png" alt="Luhan avec une carte et un sac à dos">
             <section class="boutons_parcours">
+                <h2>Mon parcours scolaire</h2>
                 <button class="lycee">Lycée Félix Le Dantec - BAC STI2D</button>
                 <button class="univ">IUT de Lannion - BUT Informatique</button>
+                <h2>Mon parcours professionel</h2>
                 <button class="stage1">Connexing</button>
                 <button class="stage2">EnvolIis</button>
-            </section>
-            
-                
+            </section>       
         </section>
         <section class="hardskills">
             <h1>Mes compétences</h1>
@@ -187,19 +167,19 @@
                 <div class="slideshow-container">
                     <div class="mySlides fade">
                       <div class="numbertext">1 / 2</div>
-                      <img src="image/IMG_3161.jpg" style="width:50%">
+                      <img src="image/IMG_3161.jpg">
                       <div class="text">Flipper de table</div>
                     </div>
                     <div class="mySlides fade">
                       <div class="numbertext">2 / 2</div>
-                      <img src="image/IMG_3157.png" style="width:50%">
+                      <img src="image/IMG_3157.png"">
                       <div class="text">Affiche</div>
                     </div>
                     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                     <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                  </div>
+                </div>
                   <br>
-                  <div style="text-align:center">
+                  <div class="div1">
                     <span class="dot" onclick="currentSlide(1)"></span>
                     <span class="dot" onclick="currentSlide(2)"></span>
                   </div>
@@ -229,7 +209,7 @@
             const section = document.querySelector('.a_propos');
             section.style.display = 'block'; // Afficher l'élément pour que l'animation fonctionne
             setTimeout(() => {
-                section.classList.add('visible');
+            section.classList.add('visible');
             }, 0); // Ajouter la classe après un court délai pour s'assurer que l'élément est affiché
         });
 
@@ -238,8 +218,27 @@
             section.classList.remove('visible');
             // Attendre la fin de l'animation pour cacher complètement l'élément
             section.addEventListener('transitionend', function handler() {
-                section.style.display = 'none';
-                section.removeEventListener('transitionend', handler);
+            section.style.display = 'none';
+            section.removeEventListener('transitionend', handler);
+            }, { once: true });
+        });
+
+        // JavaScript pour gérer l'affichage de la section "Mon Parcours" avec animation
+        document.querySelector('.parcours').addEventListener('click', function() {
+            const section = document.querySelector('.mon_parcours');
+            section.style.display = 'block'; // Afficher l'élément pour que l'animation fonctionne
+            setTimeout(() => {
+            section.classList.add('visible');
+            }, 0); // Ajouter la classe après un court délai pour s'assurer que l'élément est affiché
+        });
+
+        document.querySelector('.mon_parcours .close_pp').addEventListener('click', function() {
+            const section = document.querySelector('.mon_parcours');
+            section.classList.remove('visible');
+            // Attendre la fin de l'animation pour cacher complètement l'élément
+            section.addEventListener('transitionend', function handler() {
+            section.style.display = 'none';
+            section.removeEventListener('transitionend', handler);
             }, { once: true });
         });
 
