@@ -1,13 +1,18 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
+/* Base */
 body {
     background-color: #13121a;
     color: #fff;
     font-family: "Playfair Display", serif;
     text-align: center;
-
 }
+
+a:visited {
+    color: #FAAC53;
+}
+
+/* Header */
 header {
     padding: 0 25%;
     width: 100%;
@@ -40,16 +45,21 @@ li img{
 
 header > ul > li{
     margin-right: 10px;
+};
+
+
+/* Intro */
+.intro h1,
+.intro p {
+    font-family: "Playfair Display", serif;
+    font-weight: 100;
 }
 
-.intro h1{
-    font-family: "Playfair Display", serif;
-    font-weight: 100;
+.intro h1 {
     font-size: 48px;
 }
-.intro p{
-    font-family: "Playfair Display", serif;
-    font-weight: 100;
+
+.intro p {
     font-size: 32px;
 }
 
@@ -57,10 +67,11 @@ header > ul > li{
     width: 40%;
     height: auto;
     margin-top: 20px;
-    padding : 0 30%;
+    padding: 0 30%;
 }
 
-.cv, .propos {
+/* Boutons principaux */
+.cv, .propos, .parcours {
     display: inline-block;
     background-color: #494175;
     color: #fff;
@@ -77,23 +88,19 @@ header > ul > li{
     text-align: center;
 }
 
-.cv:hover {
-    background-color: #6a5b8b;
-}
-.propos:hover {
-    background-color: #FAAC53;
-}
+.cv:hover { background-color: #6a5b8b; }
+.propos { background-color: #FA8C23; }
+.propos:hover { background-color: #FAAC53; }
+.parcours { background-color: #4e0869; }
+.parcours:hover { background-color: #6A2C93; }
 
-.propos {
-    background-color: #FA8C23;
-}
-
-.a_propos {
+/* Sections à propos et parcours */
+.a_propos, .mon_parcours {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     background-color: #494175;
     width: 50%;
-    margin: 20px 25% 0px 25%;
+    margin: 20px 25% 0 25%;
     border-radius: 50px;
 }
 
@@ -103,42 +110,44 @@ header > ul > li{
     display: none;
 }
 
+.a_propos.visible {
+    opacity: 1;
+    display: block;
+}
+
 .a_propos img {
     width: 100%;
     height: auto;
     border-radius: 50px 50px 0 0;
 }
 
-.a_propos.visible {
-    opacity: 1;
-    display: block;
-}
-
 .close_pp img {
     position: relative;
     left: 45%;
     top: 25px;
-    height: auto;
     width: 75px;
-    z-index: 2; 
     cursor: pointer;
+    z-index: 2;
 }
 
-.a_propos h1{
+.a_propos h1 {
     font-family: "Playfair Display", serif;
     font-weight: 600;
     font-size: 32px;
     margin-top: 20px;
-    color : #FAAC53;
+    color: #FAAC53;
 }
-.a_propos p{
+
+.a_propos p {
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
     font-size: 24px;
     color: white;
     margin: 20px;
 }
-.presentation{
+
+/* Présentation */
+.presentation {
     display: flex;
     flex-direction: row;
     margin-right: 5%;
@@ -153,57 +162,28 @@ header > ul > li{
     margin-right: 5%;
 }
 
+.presentation :last-child {
+    margin-right: 0;
+}
+
 .softskills {
     background-color: #D9D9D9;
-    height: auto;
     width: 25%;
     border-radius: 25px;
     color: #FAAC53;
     padding: 1%;
     margin: 5%;
 }
-.presentation :last-child{
-    margin-right: 0;
-}
 
+/* Alignements */
+.pdroite { text-align: end; }
+.pgauche { text-align: start; }
 
-.pdroite{
-    text-align: end;
-}
-
-.pgauche{
-    text-align: start;
-}
-
+/* Compétences */
 .affcomp {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
-.competences:first-of-type{
-    margin-bottom: 100px;
-}
-.competences:first-child {
-    margin-left: 30%;
-}
-.competences:last-child {
-    margin-right: 30%;
-}
-
-.hardskills h1{
-    font-family: "Playfair Display", serif;
-    font-weight: 600;
-    font-size: 36px;
-    color : white;
-    margin-top: 20px;
-}
-
-.hardskills h2 {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 600;
-    font-size: 28px;
-    color : #FA8C23;
-    margin-top: 20px;
 }
 
 .competences {
@@ -211,42 +191,58 @@ header > ul > li{
     width: 450px;
     height: 225px;
     border-radius: 25px;
-    color : white;
+    color: white;
     font-family: "Montserrat", sans-serif;
 }
-.figcomp{
+
+.competences:first-of-type { margin-bottom: 100px; }
+.competences:first-child { margin-left: 30%; }
+.competences:last-child { margin-right: 30%; }
+
+.figcomp {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
+
 .competences img {
     width: 30%;
     height: 30%;
 }
 
-.projets h1{
+.hardskills h1,
+.projets h1 {
     font-family: "Playfair Display", serif;
     font-weight: 600;
     font-size: 36px;
-    color : white;
+    color: white;
     margin-top: 20px;
 }
 
+.hardskills h2,
 .projets h2 {
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
     font-size: 28px;
-    color : #FA8C23;
+    color: #FA8C23;
     margin-top: 20px;
 }
 
+/* Projets */
 .aff_proj {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin: 0 30%;
     margin-bottom: 50px;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.aff_proj.hidden {
+    opacity: 0;
+    display: none;
 }
 
 .aff_proj div {
@@ -258,46 +254,53 @@ header > ul > li{
     border-radius: 25px;
     font-weight: 600;
     font-size: 24px;
-}
-.proj1_ferme img {
-    width: 100%;
-    height: 50%;
-    border-radius: 25px;
-    margin-bottom: 25px;
+    transition: background-color 0.3s;
 }
 
-.proj2_ferme img{
-    width: 75%;
-    height: auto;
-    border-radius: 25px;
-    margin-bottom: 15px;
-}
-
-.aff_proj div:hover{
+.aff_proj div:hover {
     background-color: #6a5b8b;
     cursor: pointer;
 }
 
-footer {
-    background-color: #494175;
-    color: #FA8C23;
-    font-family: "Playfair Display", serif;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 50px;
+.proj1_ferme img,
+.proj1 img, .proj2 img {
+    width: 100%;
+    height: auto;
+    border-radius: 25px;
+    margin-bottom: 25px;
 }
 
-.proj1, .proj2, .proj3{
+.proj2_ferme img {
+    width: 75%;
+    margin-bottom: 15px;
+}
+
+.proj1, .proj2, .proj3 {
     background-color: #494175;
     font-family: "Montserrat", sans-serif;
     color: white;
     width: 50%;
-    height: auto;
-    margin: 0 25%;
-    margin-bottom: 50px;
+    margin: 0 25% 50px 25%;
     border-radius: 25px;
     padding-bottom: 40px;
     font-size: 24px;
+    height: auto;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    display: none;
+}
+
+.proj1.visible, .a_propos.visible {
+    display: block;
+    opacity: 1;
+}
+
+.proj1 h1, .proj2 h1 {
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    font-size: 36px;
+    color: white;
+    margin-top: 20px;
 }
 
 .proj1 a {
@@ -309,74 +312,55 @@ footer {
 .proj1 a:hover {
     color: #6a5b8b;
 }
-a:visited {
-    color: #FAAC53; /* Change to your desired color */
-}
 
-
-.proj1 h1, .proj2 h1 {
-    font-family: "Playfair Display", serif;
-    font-weight: 600;
-    font-size: 36px;
-    color : white;
-    margin-top: 20px;
-}
-.proj1 img, .proj2 img {
-    width: 75%;
-    height: auto;
-    border-radius: 25px;
-    margin-bottom: 25px;
-    
-}
 .close_proj img {
     position: relative;
     left: 45%;
     top: 25px;
-    height: auto;
     width: 75px;
-    z-index: 2; 
     cursor: pointer;
-}
-.a_propos, .proj1 ,.proj2 {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-    display: none;
+    z-index: 2;
 }
 
-
-.a_propos.visible, .proj1.visible {
-    display: block;
-    opacity: 1;
+/* Footer */
+footer {
+    background-color: #494175;
+    color: #FAAC53;
+    font-family: "Playfair Display", serif;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
 }
 
-
-.aff_proj {
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out;
+/* Boutons parcours */
+.mon_parcours button {
+    background-color: #FAAC53;
+    color: #494175;
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 20px 40px;
+    border: none;
+    border-radius: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin: 30px auto 0 auto;
+    width: 300px;
 }
 
-
-.aff_proj.hidden {
-    opacity: 0;
-    display: none;
-}
-
-
-
-/* Slideshow container */
+/* Slideshow */
 .slideshow-container {
     max-width: 1000px;
     position: relative;
     margin: auto;
-  }
-  
-  /* Hide the images by default */
-  .mySlides {
+}
+
+.mySlides {
     display: none;
-  }
-  
-  /* Next & previous buttons */
-  .prev, .next {
+}
+
+.prev, .next {
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -385,28 +369,22 @@ a:visited {
     color: white;
     font-weight: bold;
     font-size: 18px;
-    transition: 0.6s ease;
+    transition: 0.6s;
     border-radius: 0 3px 3px 0;
     user-select: none;
-  }
-  
-  /* Position the "next button" to the right */
-  .prev {
-    left: 25%;  
 }
-  
-  .next {
+
+.prev { left: 25%; }
+.next {
     right: 25%;
     border-radius: 3px 0 0 3px;
-  }
-  
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover, .next:hover {
+}
+
+.prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
-  }
-  
-  /* Caption text */
-  .text {
+}
+
+.text {
     color: #f2f2f2;
     font-size: 15px;
     padding: 8px 12px;
@@ -414,20 +392,18 @@ a:visited {
     bottom: 8px;
     width: 100%;
     text-align: center;
-  }
-  
-  /* Number text (1/3 etc) */
-  .numbertext {
+}
+
+.numbertext {
     color: #f2f2f2;
     font-size: 12px;
     padding: 8px 12px;
     position: absolute;
     top: 0;
     margin-left: 25%;
-  }
-  
-  /* The dots/bullets/indicators */
-  .dot {
+}
+
+.dot {
     cursor: pointer;
     height: 15px;
     width: 15px;
@@ -435,20 +411,19 @@ a:visited {
     background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
-    transition: background-color 0.6s ease;
-  }
-  
-  .active, .dot:hover {
+    transition: background-color 0.6s;
+}
+
+.active, .dot:hover {
     background-color: #717171;
-  }
-  
-  /* Fading animation */
-  .fade {
+}
+
+.fade {
     animation-name: fade;
     animation-duration: 1.5s;
-  }
-  
-  @keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-  }
+}
+
+@keyframes fade {
+    from { opacity: .4 }
+    to { opacity: 1 }
+}
