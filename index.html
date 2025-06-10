@@ -27,7 +27,7 @@
             <p>Étudiant en BUT Informatique</p>
             <p>à l'IUT de Lannion</p>
             <img src="image/image.png" alt="Image de Luhan dans une télé cathodique avec un fond de la matrice">
-            <button class="cv">Mon CV</button>
+            <a href="CVLuhanGuiggiaMilon.pdf" id="cv">Mon CV</a>
             <button class="propos">A propos de moi</button>
             <button class="parcours">Parcours</button>
         </section>
@@ -48,7 +48,8 @@
                     <h2>Maîtrise de Soi</h2>
                 </section>
             </section>
-            <p class="pdroite">A 18 ans, je suis actuellement en étude pour travailler dans le développement logiciel et plus tard j’espère avec du travail dans le domaine du jeu vidéo. </p>
+            <p class="pdroite">A 18 ans, je suis actuellement en étude pour travailler dans le développement logiciel et plus tard j’espère avec du travail dans le domaine du jeu vidéo. Je recherche une alternance en tant que développeur Full Stack pour mettre en pratique mes compétences et apprendre de nouvelles choses.</p>
+            </p>
             <img class="perf" src="image/perfection.png" alt="Luhan visant avec une fléchette une cible (la perfection)">
             <p class="pgauche">Durant mon cursus au BUT Informatique à l’IUT de Lannion, j’apprends les bases de plusieurs types de languages tels que le bas niveau (C, Assembleur), le Web (HTML,CSS), la Base de Données (PostgreSQL, Tutorial D), le scripting (Bash, PHP) et l’Orienté Objet (Java) afin de devenir un développeur Full Stack.</p>
             <img class="img_app" src="image/programmation.jpg"  alt="Luhan devant un écran de code">
@@ -66,14 +67,35 @@
             <div class="close_pp"><img src="image/croix.png" alt="bouton fermeture a propos"></div>
             <h1>Mon Parcours</h1>
             <img class="cartoon" src="image/parcours.png" alt="Luhan avec une carte et un sac à dos">
-            <section class="boutons_parcours">
                 <h2>Mon parcours scolaire</h2>
-                <button class="lycee">Lycée Félix Le Dantec - BAC STI2D</button>
-                <button class="univ">IUT de Lannion - BUT Informatique</button>
+            <section class="boutons_parcours">
+                <a href="https://lycee-ledantec.fr/formation/bac-industriel-sti2d/" class="lycee">Lycée Félix Le Dantec - BAC STI2D (SIN)</a>
+                <a href="https://iut-lannion.univ-rennes.fr/informatique" class="univ">IUT de Lannion - BUT Informatique (en cours)</a>
+            </section>
                 <h2>Mon parcours professionel</h2>
+            <section class="boutons_parcours">
                 <button class="stage1">Connexing</button>
                 <button class="stage2">EnvolIis</button>
-            </section>       
+            </section>
+            <section class="menu_stage1 menu_stage" >
+                <div class="close_stage"><img src="image/croix.png" alt="fermer"></div>
+                <img src="image/logo/Connexing.png" alt="logo Connexing">
+                <p>En 2020, j’ai eu l’opportunité de faire un stage d’observation dans l’entreprise Connexing.<br>
+                    Pendant une semaine j’ai pu voir les différentes missions d’un DSI.<br>
+                    Grâce à ce stage j'ai pu accroître mes connaissances en informatique<br>
+                    (notamment sur le fonctionnement d’un serveur).<br>
+                    J’ai également pu voir la partie marketing et eu la chance de pouvoir publier un article sur le blog de l’entreprise.</p>
+                    <a href="https://www.connexing.fr/">Lien vers Connexing</a>
+                    <div style="height: 40px;"></div>  
+            </section>
+            <section class="menu_stage2 menu_stage">
+                <div class="close_stage"><img src="image/croix.png" alt="fermer"></div>
+                <img src="image/logo/envoliis.png" style="width: 20% ;height: auto;" alt="logo ENVOLiiS">
+                <p>En 2021, j'ai eu une nouvelle opportunité de faire un stage d'observation dans l'entreprise Envoliis. Durant la semaine qu'ils m'ont offert , j'ai pu observé plusieurs métiers tel qu'informaticien ,etc... Cela m'a permis de découvrir les composants de serveur, d'avoir eu la chance de visiter un datacenter et de déplacer des machines virtuels.</p>
+                <a href="https://www.envoliis.com/">Lien vers Connexing</a>
+                <div style="height: 40px;"></div>  
+            </section>
+            <div style="height: 40px;"></div>       
         </section>
         <section class="hardskills">
             <h1>Mes compétences</h1>
@@ -84,24 +106,26 @@
                     <section class="figcomp">
                         <figure>
                             <img src="image/c.png" alt="logo c">
-                            <figcaption>Les bases</figcaption>
                         </figure>
                         <figure>
-                            <img class="java" src="image/java.png" alt="logo java">
-                            <figcaption>Les bases</figcaption>
+                            <img class="java" src="image/logo/java.png" alt="logo java">
                         </figure>
                     </section>
                 </section>
                 <section class="competences">
                     <h2>Développement Web</h2>
-                    <section class="figcomp">
+                    <section class="figcomp, web">
                         <figure>
-                            <img src="image/htmlcss.png" alt="logo html/css">
-                            <figcaption>Intermédiaire</figcaption>
+                            <img src="image/logo/html.png" alt="logo html">
                         </figure>
                         <figure>
-                            <img src="image/bootstrap.png" alt="logo Bootstrap">
-                            <figcaption>Les bases</figcaption>
+                            <img src="image/logo/css7.png" alt="logo css">
+                        </figure>
+                        <figure>
+                            <img src="image/php.png" alt="logo php">
+                        </figure>
+                        <figure>
+                            <img src="image/logo/js.png" alt="logo javascript">
                         </figure>
                     </section>
                 </section>
@@ -112,7 +136,6 @@
                     <section class="figcomp">
                         <figure>
                             <img src="image/sql.png" alt="logo PostgreSQL">
-                            <figcaption>Les bases</figcaption>
                         </figure>
                     </section>
                 </section>
@@ -121,19 +144,71 @@
                     <section class="figcomp">
                         <figure>
                             <img src="image/bash.png" alt="logo bash">
-                            <figcaption>Les bases</figcaption>
                         </figure>
                         <figure>
-                            <img src="image/php.png" alt="logo php">
-                            <figcaption>Les bases</figcaption>
+                            <img src="image/logo/docker.png" alt="logo docker">
                         </figure>
                     </section>
                 </section>
             </section>
+            <section class="affcomp">
+                <section class="competences1">
+                    <h2>Travail Collaboratif</h2>
+                    <section class="figcomp">
+                        <figure>
+                            <img src="image/git.png" alt="logo git">
+                        </figure>
+                        <figure>
+                            <img src="image/logo/teams.png" alt="logo teams">
+                        </figure>
+                    </section>
+                </section>
         </section>
+            <div style="margin-bottom:50px;"></div>
+            <section class="aff_comp_ac">
+                <h2>Compétences Académiques</h2>
+                <div class="boutons_comp_ac">
+                    <button class="comp_ac" data-menu="menu_comp1">Réaliser un développement d'application</button>
+                    <button class="comp_ac" data-menu="menu_comp2">Optimiser des applications informatiques</button>
+                    <button class="comp_ac" data-menu="menu_comp3">Administrer des systèmes informatiques communicants complexes</button>
+                    <button class="comp_ac" data-menu="menu_comp4">Gérer des données de l'information</button>
+                    <button class="comp_ac" data-menu="menu_comp5">Conduire un projet</button>
+                    <button class="comp_ac" data-menu="menu_comp6">Travailler dans une équipe informatique</button>
+                </div>
+                <section class="menu_comp menu_comp1">
+                    <div class="close_comp"><img src="image/croix.png" alt="fermer"></div>
+                    <h2>Réaliser un développement d'application</h2>
+                    <p>Développer des applications en respectant un cahier des charges, en utilisant différents langages et outils adaptés.</p>
+                </section>
+                <section class="menu_comp menu_comp2">
+                    <div class="close_comp"><img src="image/croix.png" alt="fermer"></div>
+                    <h2>Optimiser des applications informatiques</h2>
+                    <p>Analyser et améliorer les performances, la sécurité et la qualité du code des applications existantes.</p>
+                </section>
+                <section class="menu_comp menu_comp3">
+                    <div class="close_comp"><img src="image/croix.png" alt="fermer"></div>
+                    <h2>Administrer des systèmes informatiques communicants complexes</h2>
+                    <p>Installer, configurer et maintenir des systèmes et réseaux informatiques complexes.</p>
+                </section>
+                <section class="menu_comp menu_comp4">
+                    <div class="close_comp"><img src="image/croix.png" alt="fermer"></div>
+                    <h2>Gérer des données de l'information</h2>
+                    <p>Concevoir, exploiter et sécuriser des bases de données pour la gestion de l'information.</p>
+                </section>
+                <section class="menu_comp menu_comp5">
+                    <div class="close_comp"><img src="image/croix.png" alt="fermer"></div>
+                    <h2>Conduire un projet</h2>
+                    <p>Planifier, organiser et piloter un projet informatique en équipe.</p>
+                </section>
+                <section class="menu_comp menu_comp6">
+                    <div class="close_comp"><img src="image/croix.png" alt="fermer"></div>
+                    <h2>Travailler dans une équipe informatique</h2>
+                    <p>Collaborer efficacement au sein d'une équipe, communiquer et partager ses connaissances.</p>
+                </section>
+            </section>
         <section class="projets">
             <h1>Mon Portfolio</h1>
-            <h2>Mes projets</h2>
+            <h2>Mes projets personnels</h2>
             <section class="aff_proj">
                 <div class="proj1_ferme">
                     <figure>
@@ -149,7 +224,7 @@
                 </div>
                 <div class="proj3_ferme">
                     <figure>
-                        <img src="" alt="Image d'un jeu vidéo">
+                        <img src="image/jv_aff.png" alt="Image d'un jeu vidéo">
                         <figcaption>Jeu Vidéo</figcaption>
                     </figure>
                 </div>
@@ -159,6 +234,7 @@
                 <h1>Création du Portfolio</h1>
                 <img src="image/grand_portfolio.png" alt="Image plein écran du Portfolio">
                 <p>Ce site a été réalisé en HTML, CSS et Javascript.</p>
+                <p>J'ai conçu ce portfolio pour présenter mon parcours, mes compétences et mes projets de manière claire et interactive. L'objectif était de créer une interface moderne et agréable à parcourir, tout en mettant en avant mes réalisations et mon identité visuelle. Ce projet m'a permis de renforcer mes compétences en développement web et d'expérimenter différentes animations et interactions en JavaScript.</p>
                 <p><a href="https://github.com/Luhan-gui/portfolio">Lien Github</a></p>
             </section>
             <section class="proj2">
@@ -191,15 +267,82 @@
             </section>
             <section class="proj3">
                 <div class="close_proj"><img src="image/croix.png" alt="bouton fermeture projet"></div>
-                <h1>Titre du Projet 3</h1>
-                <img src="image/grand_portfolio.png" alt="Image plein écran du Projet 3">
-                <p>Description du Projet 3.</p>
+                <h1>Jeu vidéo</h1>
+                <img src="image/jv1.png" alt="Image plein écran du Projet 3">
+                <p>Ce projet est un jeu de platforme/RPG au gameplay innovant, que je ne vais pas décrire ici car je travaille toujours dessus de temps à autres. Ce projet est codé en C# sur Unity, que j'apprends à utiliser de manière autodidacte. J'y développe ma créativité à travers le chara design, le scénario et le gameplay.</p>
+                <img src="image/jv2.png" alt="Image du jeu vidéo">
+                <p>Je travaille sur ce projet depuis 2022, et j'espère le terminer un jour. Il est important pour moi car il représente une grande partie de mon apprentissage en programmation et en game design.</p>
+            </section>
+            <h2>Mes projets professionel</h2>
+            <section class="aff_proj">
+                <div class="proj101_ferme, proj100f">
+                    <figure>
+                        <img src="image/petit_portfolio.png" alt="Capture d'écran du Portfolio">
+                        <figcaption>Site Web</figcaption>
+                    </figure>
+                </div>
+                <div class="proj102_ferme proj100f">
+                    <figure>
+                        <img src="image/IMG_3161.jpg" alt="Image d'un Flipper de Table">
+                        <figcaption>Jeu de Plateau</figcaption>
+                    </figure>
+                </div>
+                <div class="proj103_ferme proj100f">
+                    <figure>
+                        <img src="" alt="Image d'un jeu vidéo">
+                        <figcaption>Jeu Vidéo</figcaption>
+                    </figure>
+                </div>
+            </section>
+            <section class="proj101">
+                <div class="close_proj"><img src="image/croix.png" alt="bouton fermeture projet"></div>
+                <h1>Implémentation d'un besoin client - Jeu Snake</h1>
+                <img src="image/S101.png" alt="Illustration jeu Snake">
+                <p>Ce jeu est programmé en C</p>
+                <p>Durant ce projet, j'ai programmé et testé les fonctionnalités du jeu Snake, un serpent contrôlé par le joueur qui doit manger des pommes sans rencontrer d'obstacle. J'ai documenté mon code grâce à Doxygen.</p>
+            </section>
+            <section class="proj102">
+                <div class="close_proj"><img src="image/croix.png" alt="bouton fermeture projet"></div>
+                <h1>Comparaison d'approches algorithmiques - Jeu Snake</h1>
+                <img src="image/S102.png" alt="Illustration jeu Snake">
+                <p>Cet algorithme est programmé en C</p>
+                <p>Durant ce projet, j'ai programmé et optimisé un algorithme pour le jeu Snake afin de pouvoir finir le jeu (ici manger 10 pommes) avec le moins de déplacement et de temps de calcul CPU possible.</p>
+            </section>
+            <section class="proj103">
+                <div class="close_proj"><img src="image/croix.png" alt="bouton fermeture projet"></div>
+                <h1>Installation d'un poste pour le développement</h1>
+                <img src="image/S103.png" alt="Image plein écran du Portfolio">
+                <p>Ce site a été réalisé en HTML, CSS et Javascript.</p>
+                <p>J'ai conçu ce portfolio pour présenter mon parcours, mes compétences et mes projets de manière claire et interactive. L'objectif était de créer une interface moderne et agréable à parcourir, tout en mettant en avant mes réalisations et mon identité visuelle. Ce projet m'a permis de renforcer mes compétences en développement web et d'expérimenter différentes animations et interactions en JavaScript.</p>
                 <p><a href="https://github.com/Luhan-gui/portfolio">Lien Github</a></p>
+            </section>
+            <section class="aff_proj">
+                <div class="proj104_ferme proj100f">
+                    <figure>
+                        <img src="image/petit_portfolio.png" alt="Capture d'écran du Portfolio">
+                        <figcaption>Site Web</figcaption>
+                    </figure>
+                </div>
+                <div class="proj105_ferme proj100f">
+                    <figure>
+                        <img src="image/IMG_3161.jpg" alt="Image d'un Flipper de Table">
+                        <figcaption>Jeu de Plateau</figcaption>
+                    </figure>
+                </div>
+                <div class="proj106_ferme proj100f">
+                    <figure>
+                        <img src="" alt="Image d'un jeu vidéo">
+                        <figcaption>Jeu Vidéo</figcaption>
+                    </figure>
+                </div>
             </section>
         </section>
         <footer>
             <p>Merci de votre visite !</p>
             <p>Si jamais vous avez des questions, n'hésitez pas à me contacter par mail !</p>
+            <mail>
+                <a href="mailto:luhan.guiggia@medjed-dev.fr">luhan.guiggia@medjed-dev.fr</a>
+            </mail>
             <p>Site web réalisé par Luhan Guiggia--Milon</p>
         </footer>
     </main>
@@ -300,6 +443,77 @@
             slides[slideIndex-1].style.display = "block";
             dots[slideIndex-1].className += " active";
         }
+        
+        // JavaScript pour gérer l'affichage des menus de stage
+    document.querySelector('.stage1').addEventListener('click', function() {
+        const menuStage = document.querySelector('.menu_stage1');
+        menuStage.style.display = 'block'; // Afficher l'élément pour que l'animation fonctionne
+        setTimeout(() => {
+            menuStage.classList.add('visible');
+        }, 0); // Ajouter la classe après un court délai pour s'assurer que l'élément est affiché
+    });
+
+    document.querySelector('.stage2').addEventListener('click', function() {
+        const menuStage = document.querySelector('.menu_stage2');
+        menuStage.style.display = 'block'; // Afficher l'élément pour que l'animation fonctionne
+        setTimeout(() => {
+            menuStage.classList.add('visible');
+        }, 0); // Ajouter la classe après un court délai pour s'assurer que l'élément est affiché
+    });
+
+    // JavaScript pour gérer la fermeture des menus de stage
+    document.querySelectorAll('.close_stage').forEach(closeStage => {
+        closeStage.addEventListener('click', function() {
+            const menuStage = this.closest('.menu_stage');
+            menuStage.classList.remove('visible');
+            menuStage.style.display = 'none';
+        });
+    });
+
+    // Gestion des menus compétences académiques
+                document.querySelectorAll('.comp_ac').forEach(btn => {
+                    btn.addEventListener('click', function() {
+                        // Cacher les boutons
+                        document.querySelector('.boutons_comp_ac').style.display = 'none';
+                        // Cacher tous les menus
+                        document.querySelectorAll('.menu_comp').forEach(menu => {
+                            menu.style.display = 'none';
+                            menu.classList.remove('visible');
+                        });
+                        // Afficher le menu correspondant
+                        const menuClass = '.' + this.getAttribute('data-menu');
+                        const menu = document.querySelector(menuClass);
+                        menu.style.display = 'block';
+                        setTimeout(() => {
+                            menu.classList.add('visible');
+                        }, 0);
+                    });
+                });
+                // Fermeture des menus compétences académiques
+                document.querySelectorAll('.close_comp').forEach(closeBtn => {
+                    closeBtn.addEventListener('click', function() {
+                        const menu = this.closest('.menu_comp');
+                        menu.classList.remove('visible');
+                        menu.addEventListener('transitionend', function handler() {
+                            menu.style.display = 'none';
+                            // Réafficher les boutons
+                            document.querySelector('.boutons_comp_ac').style.display = 'flex';
+                            menu.removeEventListener('transitionend', handler);
+                        }, { once: true });
+                        // Si pas d'animation/transition, fallback immédiat
+                        setTimeout(() => {
+                            if (menu.style.display !== 'none') {
+                                menu.style.display = 'none';
+                                document.querySelector('.boutons_comp_ac').style.display = 'flex';
+                            }
+                        }, 500);
+                    });
+                });
+
+                // Cacher tous les menus compétences académiques par défaut
+                document.querySelectorAll('.menu_comp').forEach(menu => {
+                    menu.style.display = 'none';
+                });
     </script>
 </body>
 </html>
