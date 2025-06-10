@@ -9,6 +9,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <style>
+        .visible {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .aff_proj div {
+            cursor: pointer;
+        }
+
+        .close_proj {
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -49,7 +68,6 @@
                 </section>
             </section>
             <p class="pdroite">A 18 ans, je suis actuellement en étude pour travailler dans le développement logiciel et plus tard j’espère avec du travail dans le domaine du jeu vidéo. Je recherche une alternance en tant que développeur Full Stack pour mettre en pratique mes compétences et apprendre de nouvelles choses.</p>
-            </p>
             <img class="perf" src="image/perfection.png" alt="Luhan visant avec une fléchette une cible (la perfection)">
             <p class="pgauche">Durant mon cursus au BUT Informatique à l’IUT de Lannion, j’apprends les bases de plusieurs types de languages tels que le bas niveau (C, Assembleur), le Web (HTML,CSS), la Base de Données (PostgreSQL, Tutorial D), le scripting (Bash, PHP) et l’Orienté Objet (Java) afin de devenir un développeur Full Stack.</p>
             <img class="img_app" src="image/programmation.jpg"  alt="Luhan devant un écran de code">
@@ -86,16 +104,16 @@
                     (notamment sur le fonctionnement d’un serveur).<br>
                     J’ai également pu voir la partie marketing et eu la chance de pouvoir publier un article sur le blog de l’entreprise.</p>
                     <a href="https://www.connexing.fr/">Lien vers Connexing</a>
-                    <div style="height: 40px;"></div>  
+                    <div style="height: 40px;"></div>
             </section>
             <section class="menu_stage2 menu_stage">
                 <div class="close_stage"><img src="image/croix.png" alt="fermer"></div>
                 <img src="image/logo/envoliis.png" style="width: 20% ;height: auto;" alt="logo ENVOLiiS">
                 <p>En 2021, j'ai eu une nouvelle opportunité de faire un stage d'observation dans l'entreprise Envoliis. Durant la semaine qu'ils m'ont offert , j'ai pu observé plusieurs métiers tel qu'informaticien ,etc... Cela m'a permis de découvrir les composants de serveur, d'avoir eu la chance de visiter un datacenter et de déplacer des machines virtuels.</p>
                 <a href="https://www.envoliis.com/">Lien vers Connexing</a>
-                <div style="height: 40px;"></div>  
+                <div style="height: 40px;"></div>
             </section>
-            <div style="height: 40px;"></div>       
+            <div style="height: 40px;"></div>
         </section>
         <section class="hardskills">
             <h1>Mes compétences</h1>
@@ -273,24 +291,24 @@
                 <img src="image/jv2.png" alt="Image du jeu vidéo">
                 <p>Je travaille sur ce projet depuis 2022, et j'espère le terminer un jour. Il est important pour moi car il représente une grande partie de mon apprentissage en programmation et en game design.</p>
             </section>
-            <h2>Mes projets professionel</h2>
+            <h2>Mes projets professionnels</h2>
             <section class="aff_proj">
-                <div class="proj101_ferme, proj100f">
+                <div class="proj101_ferme proj100f">
                     <figure>
-                        <img src="image/petit_portfolio.png" alt="Capture d'écran du Portfolio">
-                        <figcaption>Site Web</figcaption>
+                        <img src="image/S101.png" alt="Capture d'écran du Portfolio">
+                        <figcaption>Jeu Snake</figcaption>
                     </figure>
                 </div>
                 <div class="proj102_ferme proj100f">
                     <figure>
-                        <img src="image/IMG_3161.jpg" alt="Image d'un Flipper de Table">
-                        <figcaption>Jeu de Plateau</figcaption>
+                        <img src="image/S102.png" alt="Image d'un Flipper de Table">
+                        <figcaption>Algo Snake</figcaption>
                     </figure>
                 </div>
                 <div class="proj103_ferme proj100f">
                     <figure>
-                        <img src="" alt="Image d'un jeu vidéo">
-                        <figcaption>Jeu Vidéo</figcaption>
+                        <img src="image/S103.png" alt="Image d'un jeu vidéo">
+                        <figcaption>Automatisation JO 2024</figcaption>
                     </figure>
                 </div>
             </section>
@@ -310,31 +328,50 @@
             </section>
             <section class="proj103">
                 <div class="close_proj"><img src="image/croix.png" alt="bouton fermeture projet"></div>
-                <h1>Installation d'un poste pour le développement</h1>
-                <img src="image/S103.png" alt="Image plein écran du Portfolio">
-                <p>Ce site a été réalisé en HTML, CSS et Javascript.</p>
-                <p>J'ai conçu ce portfolio pour présenter mon parcours, mes compétences et mes projets de manière claire et interactive. L'objectif était de créer une interface moderne et agréable à parcourir, tout en mettant en avant mes réalisations et mon identité visuelle. Ce projet m'a permis de renforcer mes compétences en développement web et d'expérimenter différentes animations et interactions en JavaScript.</p>
-                <p><a href="https://github.com/Luhan-gui/portfolio">Lien Github</a></p>
+                <h1>Installation d'un poste pour le développement - JO 2024</h1>
+                <img src="image/S103.png" alt="Illustration Docker">
+                <p>Ce projet est programmé en Bash et utilise Docker</p>
+                <p>Durant ce projet, j'ai automatisé pour une équipe de développeurs Front et de concepteur Web plusieurs fonctionnalités avec un script bash pour faciliter et normaliser leurs tâches, tel que la conversion d'extensions photos, création automatique d'un pdf à partir d'un fichier .csv et d'image en utilisant des applications conteneurisées avec Docker. </p>
             </section>
             <section class="aff_proj">
                 <div class="proj104_ferme proj100f">
                     <figure>
-                        <img src="image/petit_portfolio.png" alt="Capture d'écran du Portfolio">
-                        <figcaption>Site Web</figcaption>
+                        <img src="image/S104.png" alt="Illusstration BDD">
+                        <figcaption>BDD Ligue 1</figcaption>
                     </figure>
                 </div>
                 <div class="proj105_ferme proj100f">
                     <figure>
-                        <img src="image/IMG_3161.jpg" alt="Image d'un Flipper de Table">
-                        <figcaption>Jeu de Plateau</figcaption>
+                        <img src="image/S105.jpg" alt="Image d'un Flipper de Table">
+                        <figcaption>Site web JO 2024</figcaption>
                     </figure>
                 </div>
                 <div class="proj106_ferme proj100f">
                     <figure>
-                        <img src="" alt="Image d'un jeu vidéo">
-                        <figcaption>Jeu Vidéo</figcaption>
+                        <img src="image/S106.jpg" alt="Image d'un jeu vidéo">
+                        <figcaption>Back Market</figcaption>
                     </figure>
                 </div>
+            </section>
+            <section class="proj104">
+                <div class="close_proj"><img src="image/croix.png" alt="bouton fermeture projet"></div>
+                <h1>Création d’une base de données</h1>
+                <img src="image/S104.png" alt="Illustration jeu Snake">
+                <p>Cette BDD à été programmé en TutorialD</p>
+                <p>Durant ce projet sur le thème de la ligue 1, j'ai programmé et peuplé une base de données à partir d'un modèle relationnel.</p>
+            </section>
+            <section class="proj105">
+                <div class="close_proj"><img src="image/croix.png" alt="bouton fermeture projet"></div>
+                <h1>Recueil des besoins - Site JO 2024</h1>
+                <img src="image/S105.jpg" alt="Illustration site web">
+                <p>Ce projet est codé en HTML/CSS</p>
+                <p>Durant ce projet, moi et mon équipe avons recueilli les besoins d'un client à travers un entretien et construit un cahier des charges afin de débuter la conception des pages webs sur Figma. Nous avons ensuite tout développé en HTML CSS et avons utilisé Git comme outil de versioning collaboratif. Nous avons pour finir présenté le projet fini au client.</p>
+            </section>
+            <section class="proj106">
+                <div class="close_proj"><img src="image/croix.png" alt="bouton fermeture projet"></div>
+                <h1>Découverte de l'environnement économique et écologique - Back Market</h1>
+                <img src="image/S106.jpg" alt="Illustration Docker">
+                <p>Durant ce projet, moi et mon équipe avons analysé l'environnement économique et écologique de l'entreprise Back Market afin d'en découvrir le déroulement.</p>
             </section>
         </section>
         <footer>
@@ -388,7 +425,7 @@
         // JavaScript pour gérer l'affichage des sections de projet avec animation
         document.querySelectorAll('.aff_proj div').forEach(projFerme => {
             projFerme.addEventListener('click', function() {
-                const projId = this.className.split('_')[0];
+                const projId = this.className.split('_')[0].split(' ')[0];
                 const sectionProj = document.querySelector(`.${projId}`);
                 const sectionAffProj = document.querySelector('.aff_proj');
 
@@ -443,7 +480,7 @@
             slides[slideIndex-1].style.display = "block";
             dots[slideIndex-1].className += " active";
         }
-        
+
         // JavaScript pour gérer l'affichage des menus de stage
     document.querySelector('.stage1').addEventListener('click', function() {
         const menuStage = document.querySelector('.menu_stage1');

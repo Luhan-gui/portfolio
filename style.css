@@ -385,7 +385,7 @@ li img {
 }
 
 .proj1_ferme img,
-.proj1 img, .proj2 img{
+.proj1 img, .proj2 img , .proj101 img, .proj102 img, .proj103 img, .proj104 img, .proj105 img, .proj106 img{
     width: 100%;
     height: auto;
     border-radius: 20px;
@@ -398,7 +398,7 @@ li img {
     border-radius: 20px;
 }
 
-.proj1, .proj2, .proj3 {
+.proj1, .proj2, .proj3, .proj101, .proj102, .proj103, .proj104, .proj105, .proj106 {
     background-color: #494175;
     font-family: "Montserrat", sans-serif;
     color: white;
