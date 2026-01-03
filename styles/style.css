@@ -1,0 +1,90 @@
+@font-face {
+  src: url("../assets/fonts/PlayfairDisplay-Medium.woff2") format("woff2");
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: medium;
+  font-style: normal;
+}
+@font-face {
+  src: url("../assets/fonts/PlayfairDisplay-Regular.woff2") format("woff2");
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  src: url("../assets/fonts/PlayfairDisplay-Bold.woff2") format("woff2");
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  src: url("../assets/fonts/Montserrat-Regular.woff2") format("woff2");
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  src: url("../assets/fonts/Montserrat-SemiBold.woff2") format("woff2");
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  src: url("../assets/fonts/Montserrat-Bold.woff2") format("woff2");
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  src: url("../assets/fonts/Montserrat-ExtraBold.woff2") format("woff2");
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  src: url("../assets/fonts/Montserrat-Black.woff2") format("woff2");
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+body {
+  background-color: #131327;
+}
+body h2 {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  color: #FAD000;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  color: white;
+}
+nav h1 {
+  margin-left: 25%;
+}
+@media (screen and (max-width:1024px)) {
+  nav h1 {
+    margin-left: 20%;
+  }
+}
+@media (screen and (max-width:768px)) {
+  nav h1 {
+    margin-left: 12%;
+  }
+}
+@media (screen and (max-width:480px)) {
+  nav h1 {
+    margin-left: 5%;
+  }
+}/*# sourceMappingURL=style.css.map */

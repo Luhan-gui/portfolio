@@ -1,0 +1,31 @@
+@use "variable.scss" as *;
+
+body {
+    background-color: $coulPrincipalDark1;
+    h2{
+        font-family: $fontprincipal;
+        font-optical-sizing: auto;
+        font-weight: normal;
+        font-style: normal;
+        color: $coulPrincipalDark2;   
+    }
+}
+nav {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    h1{
+        margin-left: 25%;
+
+        @media ($laptop) {
+            & { margin-left: 20%; }
+        }
+        @media ($tablette) {
+            & { margin-left: 12%; }
+        }
+        @media ($mobile) {
+            & { margin-left: 5%; }
+        }
+    }
+    
+}
