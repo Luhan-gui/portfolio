@@ -6,9 +6,11 @@ $coulPrincipalDark2: #FAD000;
 $coulSecondaireDark1: #A599E9;
 $coulSecondaireDark2: #FE9B01;
 
-$laptop: "screen and (max-width:1024px)";
-$tablette: "screen and (max-width:768px)";
-$mobile: "screen and (max-width:480px)";
+$laptop: 1024px;
+$tablette: 768px;
+$mobile: 480px;
 
 $fontprincipal: "Playfair Display", serif;
 $fontsecondaire: "Montserrat", sans-serif;
+
+$radiusbtn: 8px;

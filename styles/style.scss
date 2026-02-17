@@ -1,4 +1,5 @@
 @use "variable.scss" as *;
+@use "mixin.scss" as *;
 
 body {
     background-color: $coulPrincipalDark1;
@@ -9,23 +10,107 @@ body {
         font-style: normal;
         color: $coulPrincipalDark2;   
     }
+    h3{
+        color: $coulSecondaireDark2;
+        font-family: $fontsecondaire;
+    }
+    h4{
+        color: white;
+    }
 }
+
+
 nav {
     display: flex;
     flex-direction: row;
     color: white;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
     h1{
-        margin-left: 25%;
+        font-family: $fontprincipal;
+        font-optical-sizing: auto;
+        font-weight: normal;
+        font-style: normal;
+        
+        @media screen and (max-width:$laptop) {
 
-        @media ($laptop) {
-            & { margin-left: 20%; }
         }
-        @media ($tablette) {
-            & { margin-left: 12%; }
+        @media screen and (max-width:$tablette) {
+
         }
-        @media ($mobile) {
-            & { margin-left: 5%; }
+        @media screen and (max-width:$mobile) {
+            
         }
     }
+    .linkedin{
+        margin-left: 13%;
+    }
+    .github{
+        margin-left: 50px;
+    }
+}
+header {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    width:50%;
+    img{
+        width:auto;
+        margin-left: 50px;
+        @media screen and (max-width:$mobile) {
+            width:100%;
+        }
+    }
+    h2{
+        align-self: center;
+    }
+    p{
+        align-self: center;
+        color: white;
+        text-align: center;
+        line-height:25px;
+    }
+    section{
+        display: flex;
+        flex-direction: row; 
+        align-items: center; 
+        gap: 20px;
+    }
     
+}
+.btn_parcours {
+    @include btn(150px, 40px, $coulSecondaireDark2, $radiusbtn, $fontsecondaire);
+    margin-top: 20px;
+}
+.btn_cv {
+    @include btn(150px, 40px, $coulSecondaireDark1, $radiusbtn, $fontsecondaire);
+    margin-top: 20px;
+}
+.btn_a_propos {
+    @include btn(150px, 40px, $coulPrincipalDark2, $radiusbtn, $fontsecondaire);
+    margin-top: 20px;
+}
+.competence{
+    h2{
+        color:white;
+    }
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+.hardskills{
+    div{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        margin-bottom: 40px;
+        background-color: $coulSecondaireDark1;
+    }
 }

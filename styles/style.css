@@ -64,27 +64,148 @@ body h2 {
   font-style: normal;
   color: #FAD000;
 }
+body h3 {
+  color: #FE9B01;
+  font-family: "Montserrat", sans-serif;
+}
+body h4 {
+  color: white;
+}
 
 nav {
   display: flex;
   flex-direction: row;
   color: white;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
 }
 nav h1 {
-  margin-left: 25%;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
 }
-@media (screen and (max-width:1024px)) {
-  nav h1 {
-    margin-left: 20%;
+nav .linkedin {
+  margin-left: 13%;
+}
+nav .github {
+  margin-left: 50px;
+}
+
+header {
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  width: 50%;
+}
+header img {
+  width: auto;
+  margin-left: 50px;
+}
+@media screen and (max-width: 480px) {
+  header img {
+    width: 100%;
   }
 }
-@media (screen and (max-width:768px)) {
-  nav h1 {
-    margin-left: 12%;
-  }
+header h2 {
+  align-self: center;
 }
-@media (screen and (max-width:480px)) {
-  nav h1 {
-    margin-left: 5%;
-  }
+header p {
+  align-self: center;
+  color: white;
+  text-align: center;
+  line-height: 25px;
+}
+header section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.btn_parcours {
+  width: 150px;
+  height: 40px;
+  font-family: "Montserrat", sans-serif;
+  background-color: #FE9B01;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-content: center;
+  text-decoration: none;
+}
+.btn_parcours:hover {
+  background-color: rgb(203.2, 124, 0.8);
+}
+.btn_parcours {
+  margin-top: 20px;
+}
+
+.btn_cv {
+  width: 150px;
+  height: 40px;
+  font-family: "Montserrat", sans-serif;
+  background-color: #A599E9;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-content: center;
+  text-decoration: none;
+}
+.btn_cv:hover {
+  background-color: rgb(127.9838709677, 111.0483870968, 223.9516129032);
+}
+.btn_cv {
+  margin-top: 20px;
+}
+
+.btn_a_propos {
+  width: 150px;
+  height: 40px;
+  font-family: "Montserrat", sans-serif;
+  background-color: #FAD000;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-content: center;
+  text-decoration: none;
+}
+.btn_a_propos:hover {
+  background-color: rgb(199, 165.568, 0);
+}
+.btn_a_propos {
+  margin-top: 20px;
+}
+
+.competence h2 {
+  color: white;
+}
+.competence {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.hardskills div {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin-bottom: 40px;
+  background-color: #A599E9;
 }/*# sourceMappingURL=style.css.map */
