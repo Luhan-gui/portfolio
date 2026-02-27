@@ -106,11 +106,37 @@ header {
     margin-top: 20px;
 }
 .hardskills{
+    font-family: $fontsecondaire;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
     div{
         display: flex;
-        flex-direction: row;
-        gap: 20px;
-        margin-bottom: 40px;
+        margin: 20px 20px 20px 0;
+        width: 400px;
+        flex-direction: column;
         background-color: $coulSecondaireDark1;
+        align-items: center;
+        border-radius: $radiuscomp;
     }
+}
+.langage{
+    display: flex;
+    flex-direction: row;
+    figure{
+        margin:20px;
+        img{
+            width: 48px;
+            height: 48px;
+        }
+        figcaption{
+            color: white;
+            text-align: center;
+            
+        }
+    }
+    
 }

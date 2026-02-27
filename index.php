@@ -42,32 +42,84 @@
         <section class="hardskills">
             <div>
                 <h4>Programmation</h4>
-                <img src="" alt="Langage C">
-                <img src="" alt="Langage Java">
-                <img src="" alt="Langage Python">
+                <section class="langage">
+                    <figure>
+                        <img src="img/icons8-c-48.png" alt="Langage C">
+                        <figcaption>C</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="img/icons8-logo-java-coffee-cup-48.png" alt="Langage Java">
+                        <figcaption>Java</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="img/icons8-python-48.png" alt="Langage Python">
+                        <figcaption>Python</figcaption>
+                    </figure>
+                </section>
             </div>
             <div>
                 <h4>Développement Web</h4>
-                <img src="" alt="HTML5">
-                <img src="" alt="CSS 3">
-                <img src="" alt="PHP">
-                <img src="" alt="JS">
+                <section class="langage">
+                    <figure>
+                        <img src="img/icons8-html-48.png" alt="HTML 5">
+                        <figcaption>HTML</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="img/icons8-css-48.png" alt="CSS 3">
+                        <figcaption>CSS</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="img/icons8-php-48.png" alt="PHP">
+                        <figcaption>PHP</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="img/icons8-javascript-48.png" alt="JS">
+                        <figcaption>JavaScript</figcaption>
+                    </figure>
+                </section>
             </div>
             <div>
                 <h4>Base De Données</h4>
-                <img src="" alt="PostgreSQL">
-                <img src="" alt="Rel">
+                <section class="langage">
+                    <figure>
+                        <img src="img/icons8-postgresql-48.png" alt="PostgreSQL">
+                        <figcaption>PostgreSQL</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="img/icons8-mongodb-48.png" alt="MongoDB">
+                        <figcaption>MongoDB</figcaption>
+                    </figure>
+                </section>
             </div>
             <div>
                 <h4>Automatisation</h4>
-                <img src="" alt="BASH">
-                <img src="" alt="Docker">
+                <section class="langage">
+                    <figure>
+                        <img src="img/icons8-frapper-48.png" alt="BASH">
+                        <figcaption>BASH</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="img/icons8-docker-48.png" alt="Docker">
+                        <figcaption>Docker</figcaption>
+                    </figure>
+                </section>
             </div>
             <div>
                 <h4>Travail Collaboratif</h4>
-                <img src="" alt="GIT">
-                <img src="" alt="Teams">
-                <img src="" alt="Jira">
+                <section class="langage">
+                    <figure>
+                        <img src="img/icons8-git-48.png" alt="GIT">
+                        <figcaption>GIT</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="img/icons8-microsoft-teams-2019-48.png" alt="Teams">
+                        <figcaption>Teams</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="img/jira.png" alt="Jira">
+                        <figcaption>Jira</figcaption>
+                    </figure>
+                </section>
             </div>
         </section>
         <h3>Compétences Académiques</h3>

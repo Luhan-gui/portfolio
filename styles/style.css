@@ -202,10 +202,37 @@ header section {
   margin-top: 20px;
 }
 
-.hardskills div {
+.hardskills {
+  font-family: "Montserrat", sans-serif;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   gap: 20px;
-  margin-bottom: 40px;
+}
+.hardskills div {
+  display: flex;
+  margin: 20px 20px 20px 0;
+  width: 400px;
+  flex-direction: column;
   background-color: #A599E9;
+  align-items: center;
+  border-radius: 16px;
+}
+
+.langage {
+  display: flex;
+  flex-direction: row;
+}
+.langage figure {
+  margin: 20px;
+}
+.langage figure img {
+  width: 48px;
+  height: 48px;
+}
+.langage figure figcaption {
+  color: white;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */
