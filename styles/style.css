@@ -149,7 +149,7 @@ header section {
 }
 
 .btn_cv {
-  width: 150px;
+  width: 200px;
   height: 40px;
   font-family: "Montserrat", sans-serif;
   background-color: #A599E9;
@@ -188,6 +188,70 @@ header section {
 }
 .btn_a_propos {
   margin-top: 20px;
+}
+
+#parcours-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+#parcours-overlay .parcours-content {
+  background-color: #131327;
+  max-width: 600px;
+  padding: 30px;
+}
+#parcours-overlay .parcours-content h3 {
+  color: white;
+  font-family: "Playfair Display", serif;
+}
+#parcours-overlay .parcours-content a {
+  width: 350px;
+  height: 50px;
+  font-family: "Montserrat", sans-serif;
+  background-color: #FAD000;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-content: center;
+  text-decoration: none;
+}
+#parcours-overlay .parcours-content a:hover {
+  background-color: rgb(199, 165.568, 0);
+}
+#parcours-overlay .parcours-content a {
+  color: #A599E9;
+  text-align: center;
+}
+#parcours-overlay .parcours-content button {
+  width: 350px;
+  height: 50px;
+  font-family: "Montserrat", sans-serif;
+  background-color: #FAD000;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-content: center;
+  text-decoration: none;
+}
+#parcours-overlay .parcours-content button:hover {
+  background-color: rgb(199, 165.568, 0);
+}
+#parcours-overlay .parcours-content button {
+  color: #A599E9;
+  text-align: center;
 }
 
 .competence h2 {
@@ -235,4 +299,39 @@ header section {
 .langage figure figcaption {
   color: white;
   text-align: center;
+}
+
+.compacad {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.compacad button {
+  width: 600px;
+  height: 75px;
+  font-family: "Montserrat", sans-serif;
+  background-color: #A599E9;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-content: center;
+  text-decoration: none;
+}
+.compacad button:hover {
+  background-color: rgb(127.9838709677, 111.0483870968, 223.9516129032);
+}
+
+.projet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.projet h2 {
+  color: white;
 }/*# sourceMappingURL=style.css.map */
