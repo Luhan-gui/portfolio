@@ -27,25 +27,26 @@
         <p>Je suis Guiggia--Milon Luhan,<br> Étudiant en BUT Informatique <br> à l'IUT de Lannion</p>
         <img src="img/header.png" alt="Luhan GUIGGIA--MILON dans un écran indiquant de scroller la page vers le bas">
         <section>
-            <button class="btn_parcours">Mon parcours</button>
+            <button id="btn_parcours">Mon parcours</button>
             <a class="btn_cv" href="/assets/pdf/CV_GUIGGIA--MILON_Luhan.pdf" target="_blank" rel="noopener noreferrer">
                 Mon CV
             </a>
-            <button class="btn_a_propos">
+            <button id="btn_a_propos">
                 À propos de moi
             </button>
         </section>
     </header>
     <section id="parcours-overlay">
         <div class="parcours-content">
+            <button class="close1 btnfermer">Fermer l'overlay</button>
             <h2>Mon parcours</h2>
             <img src="img/parcours.png" alt="Luhan avec une carte">
             <h3>Mon parcours académique</h3>
-            <a href="">Lycée Félix Le Dantec - BAC STI2D (SIN)</a>
-            <a href="">IUT de Lannion - BUT Informatique (en cours)</a>
+            <a href="https://lycee-ledantec.fr/formation/bac-industriel-sti2d/">Lycée Félix Le Dantec - BAC STI2D (SIN)</a>
+            <a href="https://formations.univ-rennes.fr/mention/bachelor-universitaire-de-technologie-mention-informatique">IUT de Lannion - BUT Informatique (en cours)</a>
             <h3>Mon parcours professionnel</h3>
-            <button>Connexing</button>
-            <button>EnvolIis</button>
+            <button id="btnConnexing">Connexing</button> 
+            <button id="btnEnvoliis">EnvolIis</button>
         </div>
     </section>
     <section class="competence">
@@ -154,13 +155,25 @@
 
 </body>
 <script>
-    const btnParcours = document.querySelector('.btn_parcours');
-    const btnAPropos = document.querySelector('.btn_a_propos');
-    const sectionParcours = document.querySelector('.parcours');
+    const btnParcours = document.querySelector('#btn_parcours');
+    const btnAPropos = document.querySelector('#btn_a_propos');
+    const btnCV = document.querySelector('#btn_cv');
+    const btnConnexing = document.querySelector('#btnConnexing');
+    const btnEnvoliis = document.querySelector('#btnEnvoliis');
+    const sectionParcours = document.querySelector('#parcours-overlay');
+    const fermer1 = document.querySelector('.close1');
 
-    btnParcours.addEventListener('click', () => {
-        sectionParcours;
-    });
+    if (btnParcours && sectionParcours) {
+        btnParcours.addEventListener('click', () => {
+            sectionParcours.style.display = 'flex';
+        });
+    }
+
+    if (fermer1 && sectionParcours) {
+        fermer1.addEventListener('click', () => {
+            sectionParcours.style.display = 'none';
+        });
+    }
 
 </script>
 </html>
