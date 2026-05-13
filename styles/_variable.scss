@@ -1,6 +1,5 @@
 @use "fonts.scss" as *;
 
-
 $coulPrincipalDark1: #131327;
 $coulPrincipalDark2: #FAD000;
 $coulSecondaireDark1: #A599E9;
@@ -10,7 +9,8 @@ $laptop: 1024px;
 $tablette: 768px;
 $mobile: 480px;
 
-$fontprincipal: "Playfair Display", serif;
+
+$fontprincipal: "Space Grotesk", sans-serif;
 $fontsecondaire: "Montserrat", sans-serif;
 
 $radiusbtn: 8px;

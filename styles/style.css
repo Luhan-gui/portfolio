@@ -1,36 +1,12 @@
-@font-face {
-  src: url("../assets/fonts/PlayfairDisplay-Medium.woff2") format("woff2");
-  font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
-  font-weight: medium;
-  font-style: normal;
-}
-@font-face {
-  src: url("../assets/fonts/PlayfairDisplay-Regular.woff2") format("woff2");
-  font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  src: url("../assets/fonts/PlayfairDisplay-Bold.woff2") format("woff2");
-  font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
-  font-weight: bold;
-  font-style: normal;
-}
+@charset "UTF-8";
+/* Importation de Space Grotesk via Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+/* Tes anciennes polices locales (conservées au cas où) */
 @font-face {
   src: url("../assets/fonts/Montserrat-Regular.woff2") format("woff2");
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  src: url("../assets/fonts/Montserrat-SemiBold.woff2") format("woff2");
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
   font-style: normal;
 }
 @font-face {
@@ -40,27 +16,14 @@
   font-weight: bold;
   font-style: normal;
 }
-@font-face {
-  src: url("../assets/fonts/Montserrat-ExtraBold.woff2") format("woff2");
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 800;
-  font-style: normal;
-}
-@font-face {
-  src: url("../assets/fonts/Montserrat-Black.woff2") format("woff2");
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 900;
-  font-style: normal;
-}
+/* Changement de la police principale */
 body {
   background-color: #131327;
 }
 body h2 {
-  font-family: "Playfair Display", serif;
+  font-family: "Space Grotesk", sans-serif;
   font-optical-sizing: auto;
-  font-weight: normal;
+  font-weight: 700;
   font-style: normal;
   color: #FAD000;
 }
@@ -70,6 +33,7 @@ body h3 {
 }
 body h4 {
   color: white;
+  font-family: "Space Grotesk", sans-serif;
 }
 
 nav {
@@ -82,9 +46,8 @@ nav {
   text-align: center;
 }
 nav h1 {
-  font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
-  font-weight: normal;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
   font-style: normal;
 }
 nav .linkedin {
@@ -127,7 +90,7 @@ header section {
   gap: 20px;
 }
 
-.btn_parcours {
+#btn_parcours {
   width: 150px;
   height: 40px;
   font-family: "Montserrat", sans-serif;
@@ -141,10 +104,10 @@ header section {
   align-content: center;
   text-decoration: none;
 }
-.btn_parcours:hover {
+#btn_parcours:hover {
   background-color: rgb(203.2, 124, 0.8);
 }
-.btn_parcours {
+#btn_parcours {
   margin-top: 20px;
 }
 
@@ -169,7 +132,7 @@ header section {
   margin-top: 20px;
 }
 
-.btn_a_propos {
+#btn_a_propos {
   width: 150px;
   height: 40px;
   font-family: "Montserrat", sans-serif;
@@ -183,45 +146,64 @@ header section {
   align-content: center;
   text-decoration: none;
 }
-.btn_a_propos:hover {
+#btn_a_propos:hover {
   background-color: rgb(199, 165.568, 0);
 }
-.btn_a_propos {
+#btn_a_propos {
   margin-top: 20px;
 }
 
-#parcours-overlay {
+/* =========================================
+   OVERLAYS STANDARDS (Parcours, Connexing, Envoliis)
+   ========================================= */
+#parcours-overlay, #connexing-overlay, #envoliis-overlay {
   position: fixed;
+  color: white;
+  font-family: "Montserrat", sans-serif;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.8);
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
   z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
-#parcours-overlay .parcours-content {
+#parcours-overlay.active, #connexing-overlay.active, #envoliis-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+#parcours-overlay.active .parcours-content, #parcours-overlay.active .connexing-content, #parcours-overlay.active .envoliis-content, #connexing-overlay.active .parcours-content, #connexing-overlay.active .connexing-content, #connexing-overlay.active .envoliis-content, #envoliis-overlay.active .parcours-content, #envoliis-overlay.active .connexing-content, #envoliis-overlay.active .envoliis-content {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+#parcours-overlay .parcours-content, #parcours-overlay .connexing-content, #parcours-overlay .envoliis-content, #connexing-overlay .parcours-content, #connexing-overlay .connexing-content, #connexing-overlay .envoliis-content, #envoliis-overlay .parcours-content, #envoliis-overlay .connexing-content, #envoliis-overlay .envoliis-content {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  text-align: center;
   width: min(90%, 560px);
-  height: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  overflow-x: hidden;
   margin: 0 auto;
   gap: 5px;
   border-radius: 12px;
   background-color: #131327;
-  max-width: 600px;
   padding: 30px;
+  opacity: 0;
+  transform: scale(0.9) translateY(40px);
+  transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-#parcours-overlay .parcours-content h3 {
+#parcours-overlay .parcours-content h3, #parcours-overlay .connexing-content h3, #parcours-overlay .envoliis-content h3, #connexing-overlay .parcours-content h3, #connexing-overlay .connexing-content h3, #connexing-overlay .envoliis-content h3, #envoliis-overlay .parcours-content h3, #envoliis-overlay .connexing-content h3, #envoliis-overlay .envoliis-content h3 {
   color: white;
-  font-family: "Playfair Display", serif;
+  font-family: "Space Grotesk", sans-serif;
 }
-#parcours-overlay .parcours-content a {
+#parcours-overlay .parcours-content a, #parcours-overlay .parcours-content button:not(.btnfermer), #parcours-overlay .connexing-content a, #parcours-overlay .connexing-content button:not(.btnfermer), #parcours-overlay .envoliis-content a, #parcours-overlay .envoliis-content button:not(.btnfermer), #connexing-overlay .parcours-content a, #connexing-overlay .parcours-content button:not(.btnfermer), #connexing-overlay .connexing-content a, #connexing-overlay .connexing-content button:not(.btnfermer), #connexing-overlay .envoliis-content a, #connexing-overlay .envoliis-content button:not(.btnfermer), #envoliis-overlay .parcours-content a, #envoliis-overlay .parcours-content button:not(.btnfermer), #envoliis-overlay .connexing-content a, #envoliis-overlay .connexing-content button:not(.btnfermer), #envoliis-overlay .envoliis-content a, #envoliis-overlay .envoliis-content button:not(.btnfermer) {
   width: 350px;
   height: 50px;
   font-family: "Montserrat", sans-serif;
@@ -235,45 +217,269 @@ header section {
   align-content: center;
   text-decoration: none;
 }
-#parcours-overlay .parcours-content a:hover {
+#parcours-overlay .parcours-content a:hover, #parcours-overlay .parcours-content button:not(.btnfermer):hover, #parcours-overlay .connexing-content a:hover, #parcours-overlay .connexing-content button:not(.btnfermer):hover, #parcours-overlay .envoliis-content a:hover, #parcours-overlay .envoliis-content button:not(.btnfermer):hover, #connexing-overlay .parcours-content a:hover, #connexing-overlay .parcours-content button:not(.btnfermer):hover, #connexing-overlay .connexing-content a:hover, #connexing-overlay .connexing-content button:not(.btnfermer):hover, #connexing-overlay .envoliis-content a:hover, #connexing-overlay .envoliis-content button:not(.btnfermer):hover, #envoliis-overlay .parcours-content a:hover, #envoliis-overlay .parcours-content button:not(.btnfermer):hover, #envoliis-overlay .connexing-content a:hover, #envoliis-overlay .connexing-content button:not(.btnfermer):hover, #envoliis-overlay .envoliis-content a:hover, #envoliis-overlay .envoliis-content button:not(.btnfermer):hover {
   background-color: rgb(199, 165.568, 0);
 }
-#parcours-overlay .parcours-content a {
+#parcours-overlay .parcours-content a, #parcours-overlay .parcours-content button:not(.btnfermer), #parcours-overlay .connexing-content a, #parcours-overlay .connexing-content button:not(.btnfermer), #parcours-overlay .envoliis-content a, #parcours-overlay .envoliis-content button:not(.btnfermer), #connexing-overlay .parcours-content a, #connexing-overlay .parcours-content button:not(.btnfermer), #connexing-overlay .connexing-content a, #connexing-overlay .connexing-content button:not(.btnfermer), #connexing-overlay .envoliis-content a, #connexing-overlay .envoliis-content button:not(.btnfermer), #envoliis-overlay .parcours-content a, #envoliis-overlay .parcours-content button:not(.btnfermer), #envoliis-overlay .connexing-content a, #envoliis-overlay .connexing-content button:not(.btnfermer), #envoliis-overlay .envoliis-content a, #envoliis-overlay .envoliis-content button:not(.btnfermer) {
   color: #A599E9;
   text-align: center;
 }
-#parcours-overlay .parcours-content button {
-  width: 350px;
-  height: 50px;
-  font-family: "Montserrat", sans-serif;
-  background-color: #FAD000;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  align-content: center;
-  text-decoration: none;
+#parcours-overlay .parcours-content, #connexing-overlay .parcours-content, #envoliis-overlay .parcours-content {
+  height: 90%;
+  justify-content: center;
 }
-#parcours-overlay .parcours-content button:hover {
-  background-color: rgb(199, 165.568, 0);
+#parcours-overlay .connexing-content, #parcours-overlay .envoliis-content, #connexing-overlay .connexing-content, #connexing-overlay .envoliis-content, #envoliis-overlay .connexing-content, #envoliis-overlay .envoliis-content {
+  height: 50%;
+  justify-content: center;
 }
-#parcours-overlay .parcours-content button {
-  color: #A599E9;
-  text-align: center;
+#parcours-overlay .connexing-content img, #parcours-overlay .envoliis-content img, #connexing-overlay .connexing-content img, #connexing-overlay .envoliis-content img, #envoliis-overlay .connexing-content img, #envoliis-overlay .envoliis-content img {
+  width: 200px;
+  height: auto;
+  margin-bottom: 20px;
 }
 
+/* =========================================
+   OVERLAY A PROPOS SPÉCIFIQUE
+   ========================================= */
+#propos-overlay {
+  position: fixed;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Permet le scroll global */
+  overflow-y: auto; /* Le fond noir défile */
+  padding: 5vh 0;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+#propos-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+#propos-overlay.active .propos-content {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+#propos-overlay .propos-content {
+  position: relative; /* Permet d'accrocher le judoka aux bords */
+  background-color: #A599E9; /* Le fond violet */
+  width: min(95%, 1000px);
+  margin: auto;
+  padding: 50px 20px 80px 20px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  opacity: 0;
+  transform: scale(0.9) translateY(40px);
+  transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+#propos-overlay .propos-content h2 {
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #FAD000;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+#propos-overlay .propos-content {
+  /* 1. UNIQUEMENT les 3 premières DIV (Les Cartes) */
+}
+#propos-overlay .propos-content > div:nth-of-type(1),
+#propos-overlay .propos-content > div:nth-of-type(2),
+#propos-overlay .propos-content > div:nth-of-type(3) {
+  background-color: #131327;
+  flex: 1 1 200px;
+  max-width: 260px;
+  margin: 15px;
+  padding: 30px 15px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+#propos-overlay .propos-content > div:nth-of-type(1):hover,
+#propos-overlay .propos-content > div:nth-of-type(2):hover,
+#propos-overlay .propos-content > div:nth-of-type(3):hover {
+  transform: translateY(-8px);
+}
+#propos-overlay .propos-content > div:nth-of-type(1) h3,
+#propos-overlay .propos-content > div:nth-of-type(2) h3,
+#propos-overlay .propos-content > div:nth-of-type(3) h3 {
+  color: #FE9B01;
+  margin: 0;
+  font-size: 1.2rem;
+  font-family: "Space Grotesk", sans-serif;
+}
+#propos-overlay .propos-content {
+  /* 2. Textes et Images de la timeline */
+}
+#propos-overlay .propos-content > p {
+  width: 100%;
+  max-width: 800px;
+  color: white;
+  line-height: 1.6;
+  margin: 30px 15px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.05rem;
+  flex-basis: 100%;
+}
+#propos-overlay .propos-content {
+  /* L'alternance des paragraphes */
+}
+#propos-overlay .propos-content > p:nth-of-type(1) {
+  text-align: center;
+}
+#propos-overlay .propos-content > p:nth-of-type(2) {
+  text-align: left;
+  padding-right: 20%;
+}
+#propos-overlay .propos-content > p:nth-of-type(3) {
+  text-align: right;
+  padding-left: 20%;
+}
+#propos-overlay .propos-content > p:nth-of-type(4) {
+  text-align: left;
+  padding-right: 20%;
+}
+#propos-overlay .propos-content {
+  /* CORRECTION ICI : Le 5ème paragraphe fait de la place au judoka */
+}
+#propos-overlay .propos-content > p:nth-of-type(5) {
+  text-align: right;
+  padding-left: 10%;
+  padding-right: 260px; /* Laisse le trou à droite pour la tête du judoka ! */
+}
+@media screen and (max-width: 768px) {
+  #propos-overlay .propos-content > p:nth-of-type(5) {
+    padding-right: 0;
+    text-align: center;
+  }
+}
+#propos-overlay .propos-content > img {
+  max-width: 90%;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  margin: 20px auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+#propos-overlay .propos-content {
+  /* L'image de la fléchette sans ombre */
+}
+#propos-overlay .propos-content > img:nth-of-type(1) {
+  width: 800px;
+  max-width: 100%;
+  box-shadow: none;
+  border-radius: 0;
+  margin: 20px auto;
+}
+#propos-overlay .propos-content {
+  /* 3. Section de fin : La Citation (Dernier paragraphe) */
+}
+#propos-overlay .propos-content > p:last-of-type {
+  color: #FAD000;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 1.15rem;
+  text-align: right;
+  padding-right: 260px; /* Laisse l'espace vide pour le judoka */
+  margin-top: 40px;
+  padding-left: 0;
+}
+@media screen and (max-width: 768px) {
+  #propos-overlay .propos-content > p:last-of-type {
+    padding-right: 0;
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+#propos-overlay .propos-content {
+  /* 4. Le Judoka qui "sort" du cadre (Dernière image) */
+}
+#propos-overlay .propos-content > img:last-of-type {
+  position: absolute;
+  bottom: -50px; /* Le fait pendre sous la boîte violette */
+  right: -45px; /* Le fait dépasser sur la droite */
+  width: 240px;
+  height: auto;
+  box-shadow: none;
+  border-radius: 0;
+  margin: 0;
+  z-index: 10;
+  pointer-events: none; /* Empêche le judoka de bloquer les clics de souris en dessous */
+}
+@media screen and (max-width: 768px) {
+  #propos-overlay .propos-content > img:last-of-type {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    margin: 20px auto -50px auto; /* Toujours un peu suspendu en bas sur mobile */
+    display: block;
+  }
+}
+#propos-overlay .propos-content .btnfermer {
+  color: #131327;
+  background-color: transparent;
+}
+#propos-overlay .propos-content .btnfermer:hover {
+  background-color: #FAD000;
+}
+
+.btnfermer {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+.btnfermer svg {
+  width: 28px;
+  height: 28px;
+}
+.btnfermer:hover {
+  background-color: #FAD000;
+  color: #131327;
+  transform: scale(1.1) rotate(90deg);
+}
+
+/* =========================================
+   COMPÉTENCES (HARD SKILLS)
+   ========================================= */
 .competence h2 {
   color: white;
+  margin-bottom: 10px;
 }
 .competence {
   align-items: center;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   gap: 20px;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .hardskills {
@@ -282,33 +488,67 @@ header section {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  gap: 20px;
+  align-items: stretch;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 20px auto;
 }
 .hardskills div {
   display: flex;
-  margin: 20px 20px 20px 0;
-  width: 400px;
   flex-direction: column;
   background-color: #A599E9;
   align-items: center;
   border-radius: 16px;
+  width: 340px;
+  padding: 25px 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hardskills div:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+.hardskills div h4 {
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 10px;
+  width: 80%;
+  text-align: center;
 }
 
 .langage {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  width: 100%;
 }
 .langage figure {
-  margin: 20px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+.langage figure:hover {
+  transform: scale(1.15);
 }
 .langage figure img {
   width: 48px;
   height: 48px;
+  margin-bottom: 10px;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
 }
 .langage figure figcaption {
   color: white;
   text-align: center;
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 
 .compacad {
@@ -317,9 +557,11 @@ header section {
   justify-content: center;
   align-items: center;
   gap: 20px;
+  width: 90%;
+  margin: 20px auto;
 }
 .compacad button {
-  width: 600px;
+  width: min(100%, 600px);
   height: 75px;
   font-family: "Montserrat", sans-serif;
   background-color: #A599E9;
@@ -335,6 +577,9 @@ header section {
 .compacad button:hover {
   background-color: rgb(127.9838709677, 111.0483870968, 223.9516129032);
 }
+.compacad button {
+  padding: 0 15px;
+}
 
 .projet {
   display: flex;
@@ -344,15 +589,4 @@ header section {
 }
 .projet h2 {
   color: white;
-}
-
-.btnfermer {
-  position: absolute;
-  top: 50px;
-  right: 50px;
-  background-color: transparent;
-  border: none;
-  color: white;
-  font-size: 24px;
-  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
