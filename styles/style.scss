@@ -1,20 +1,26 @@
-@use "variable.scss" as *;
-@use "mixin.scss" as *;
+@use "variable" as *;
+@use "mixin" as *;
 
 body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
     background-color: $coulPrincipalDark1;
-    h2{
+    
+    h2 {
         font-family: $fontprincipal;
         font-optical-sizing: auto;
         font-weight: 700;
         font-style: normal;
         color: $coulPrincipalDark2;   
     }
-    h3{
+    
+    h3 {
         color: $coulSecondaireDark2;
         font-family: $fontsecondaire;
     }
-    h4{
+    
+    h4 {
         color: white;
         font-family: $fontprincipal;
     }
@@ -28,17 +34,20 @@ nav {
     align-items: center;
     width: 100%;
     text-align: center;
-    h1{
+    
+    h1 {
         font-family: $fontprincipal;
         font-weight: 700;
         font-style: normal;
-        
-        @media screen and (max-width:$laptop) {}
-        @media screen and (max-width:$tablette) {}
-        @media screen and (max-width:$mobile) {}
     }
-    .linkedin{ margin-left: 13%; }
-    .github{ margin-left: 50px; }
+    
+    .linkedin {
+        margin-left: 13%;
+    }
+    
+    .github {
+        margin-left: 50px;
+    }
 }
 
 header {
@@ -47,20 +56,29 @@ header {
     align-items: center;
     text-align: center;
     flex-direction: column;
-    width:50%;
-    img{
-        width:auto;
+    width: 50%;
+    
+    img {
+        width: auto;
         margin-left: 50px;
-        @media screen and (max-width:$mobile) { width:100%; }
+        
+        @media screen and (max-width: $mobile) {
+            width: 100%;
+        }
     }
-    h2{ align-self: center; }
-    p{
+    
+    h2 {
+        align-self: center;
+    }
+    
+    p {
         align-self: center;
         color: white;
         text-align: center;
-        line-height:25px;
+        line-height: 25px;
     }
-    section{
+    
+    section {
         display: flex;
         flex-direction: row; 
         align-items: center; 
@@ -72,17 +90,19 @@ header {
     @include btn(150px, 40px, $coulSecondaireDark2, $radiusbtn, $fontsecondaire);
     margin-top: 20px;
 }
+
 .btn_cv {
     @include btn(200px, 40px, $coulSecondaireDark1, $radiusbtn, $fontsecondaire);
     margin-top: 20px;
 }
+
 #btn_a_propos {
     @include btn(150px, 40px, $coulPrincipalDark2, $radiusbtn, $fontsecondaire);
     margin-top: 20px;
 }
 
 /* =========================================
-   OVERLAYS STANDARDS
+   OVERLAYS STANDARDS (Parcours, Connexing, Envoliis)
    ========================================= */
 #parcours-overlay, #connexing-overlay, #envoliis-overlay {
     position: fixed;
@@ -94,7 +114,6 @@ header {
     justify-content: center;
     align-items: center;
     z-index: 9999;
-    
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
@@ -102,6 +121,7 @@ header {
     &.active {
         opacity: 1;
         visibility: visible;
+        
         .parcours-content, .connexing-content, .envoliis-content {
             opacity: 1;
             transform: scale(1) translateY(0);
@@ -122,7 +142,6 @@ header {
         border-radius: 12px;
         background-color: $coulPrincipalDark1;
         padding: 30px;
-        
         opacity: 0;
         transform: scale(0.9) translateY(40px);
         transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -131,23 +150,66 @@ header {
             color: white;
             font-family: $fontprincipal;
         }
+        
         a, button:not(.btnfermer) {
             @include btn(350px, 50px, $coulPrincipalDark2, $radiusbtn, $fontsecondaire);
             color: $coulSecondaireDark1;
             text-align: center;
         }
+        .parcours-img-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+
+            img {
+                max-width: 200px; // Ajuste cette valeur selon la taille réelle de ton image
+                height: auto;
+            }
+
+            .bulle-texte {
+                color: $coulSecondaireDark2; // Reprend ton orange pour faire un rappel visuel
+                font-family: $fontprincipal;
+                font-size: 1.2rem;
+                font-style: italic;
+                font-weight: 700;
+                max-width: 180px;
+                text-align: left;
+                line-height: 1.4;
+            }
+
+            // Comportement responsive : sur mobile, on repasse le texte en dessous pour que ça rentre
+            @media screen and (max-width: $mobile) {
+                flex-direction: column;
+                gap: 10px;
+
+                .bulle-texte {
+                    text-align: center;
+                }
+            }
+        }
     }
 
-    .parcours-content { height: 90%; justify-content: center; }
+    .parcours-content { 
+        height: 90%; 
+        justify-content: center; 
+    }
+    
     .connexing-content, .envoliis-content {
         height: 50%;
         justify-content: center;
-        img { width: 200px; height: auto; margin-bottom: 20px; }
+        
+        img { 
+            width: 200px; 
+            height: auto; 
+            margin-bottom: 20px; 
+        }
     }
 }
 
 /* =========================================
-   OVERLAY A PROPOS
+   OVERLAY A PROPOS SPÉCIFIQUE (Judoka & Alaligne)
    ========================================= */
 #propos-overlay {
     position: fixed;
@@ -157,11 +219,10 @@ header {
     background-color: rgba(0, 0, 0, 0.8);
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: flex-start; 
     overflow-y: auto;         
     padding: 5vh 0;           
     z-index: 9999;
-    
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
@@ -169,6 +230,7 @@ header {
     &.active {
         opacity: 1;
         visibility: visible;
+        
         .propos-content {
             opacity: 1;
             transform: scale(1) translateY(0);
@@ -187,7 +249,6 @@ header {
         flex-wrap: wrap;
         justify-content: center;
         align-content: flex-start;
-        
         opacity: 0;
         transform: scale(0.9) translateY(40px);
         transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -214,10 +275,12 @@ header {
             flex-direction: column;
             align-items: center;
             gap: 20px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s ease;
 
-            &:hover { transform: translateY(-8px); }
+            &:hover { 
+                transform: translateY(-8px); 
+            }
 
             h3 {
                 color: $coulSecondaireDark2; 
@@ -242,11 +305,11 @@ header {
         > p:nth-of-type(2) { text-align: left; padding-right: 20%; } 
         > p:nth-of-type(3) { text-align: right; padding-left: 20%; } 
         > p:nth-of-type(4) { text-align: left; padding-right: 20%; } 
-
+        
         > p:nth-of-type(5) { 
             text-align: right; 
             padding-left: 10%; 
-            padding-right: 260px;
+            padding-right: 260px; 
             
             @media screen and (max-width: $tablette) {
                 padding-right: 0;
@@ -257,7 +320,7 @@ header {
         > img {
             max-width: 90%;
             border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             margin: 20px auto;
             object-fit: cover;
             display: block;
@@ -271,14 +334,13 @@ header {
             margin: 20px auto;
         }
 
-
         > p:last-of-type {
             color: $coulPrincipalDark2; 
             font-weight: 700;
             font-style: italic;
             font-size: 1.15rem;
             text-align: right;
-            padding-right: 260px;
+            padding-right: 260px; 
             margin-top: 40px;
             padding-left: 0; 
             
@@ -292,7 +354,7 @@ header {
         > img:last-of-type {
             position: absolute;
             bottom: -50px; 
-            right: -45px;  
+            right: -30px;  
             width: 240px;
             height: auto;
             box-shadow: none;
@@ -321,13 +383,18 @@ header {
     }
 }
 
+/* =========================================
+   BOUTON FERMER GLOBAL (La Croix)
+   ========================================= */
 .btnfermer {
     position: absolute;
-    top: 30px; right: 30px;
+    top: 30px; 
+    right: 30px;
     background-color: rgba(255, 255, 255, 0.1); 
     border: none;
     border-radius: 50%; 
-    width: 50px; height: 50px;
+    width: 50px; 
+    height: 50px;
     color: white; 
     cursor: pointer;
     display: flex;
@@ -336,7 +403,11 @@ header {
     transition: all 0.3s ease; 
     z-index: 10;
 
-    svg { width: 28px; height: 28px; }
+    svg { 
+        width: 28px; 
+        height: 28px; 
+    }
+    
     &:hover {
         background-color: $coulPrincipalDark2; 
         color: $coulPrincipalDark1; 
@@ -345,10 +416,13 @@ header {
 }
 
 /* =========================================
-   COMPÉTENCES 
+   COMPÉTENCES (HARD SKILLS)
    ========================================= */
 .competence {
-    h2 { color: white; margin-bottom: 10px; }
+    h2 { 
+        color: white; 
+        margin-bottom: 10px; 
+    }
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -411,12 +485,18 @@ header {
         flex-direction: column;
         align-items: center;
         transition: transform 0.2s ease;
-        &:hover { transform: scale(1.15); }
+        
+        &:hover { 
+            transform: scale(1.15); 
+        }
+        
         img {
-            width: 48px; height: 48px;
+            width: 48px; 
+            height: 48px;
             margin-bottom: 10px; 
             filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2)); 
         }
+        
         figcaption {
             color: white;
             text-align: center;
@@ -434,16 +514,262 @@ header {
     gap: 20px;
     width: 90%; 
     margin: 20px auto;
+    
     button {
         @include btn(min(100%, 600px), 75px, $coulSecondaireDark1, $radiusbtn, $fontsecondaire);
         padding: 0 15px;
     }
 }
 
+/* =========================================
+   GRILLE DES PROJETS & CARDS
+   ========================================= */
 .projet {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    h2 { color: white; }
+    width: 100%;
+    
+    h2 { color: white; margin-bottom: 20px; }
+    h3 { margin-top: 30px; margin-bottom: 10px; color: $coulSecondaireDark2;}
+}
+
+.projet-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+    max-width: 1000px;
+    margin-bottom: 40px;
+}
+
+.projet-card {
+    background-color: $coulPrincipalDark1;
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    width: 280px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    padding: 0;
+    text-align: left;
+
+    &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+        
+        img { 
+            filter: brightness(1); 
+        }
+    }
+
+    img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+        border-bottom: 3px solid $coulPrincipalDark2; 
+        filter: brightness(0.8);
+        transition: filter 0.3s ease;
+    }
+
+    .projet-info {
+        padding: 20px;
+        background-color: $coulSecondaireDark1; 
+
+        h4 {
+            margin: 0 0 5px 0;
+            color: $coulPrincipalDark1;
+            font-size: 1.2rem;
+            font-family: $fontprincipal;
+        }
+
+        p {
+            margin: 0;
+            color: white;
+            font-family: $fontsecondaire;
+            font-size: 0.95rem;
+        }
+    }
+}
+
+/* =========================================
+   OVERLAYS DES PROJETS
+   ========================================= */
+.overlay-projet {
+    position: fixed;
+    color: white;
+    font-family: $fontsecondaire;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        
+        .projet-overlay-content {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+        }
+    }
+
+    .projet-overlay-content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: min(90%, 650px);
+        max-height: 90vh;
+        overflow-y: auto;
+        background-color: $coulPrincipalDark1;
+        padding: 40px;
+        border-radius: 12px;
+        text-align: center;
+        opacity: 0;
+        transform: scale(0.9) translateY(40px);
+        transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+        h2 {
+            color: $coulPrincipalDark2;
+            margin-bottom: 20px;
+            font-family: $fontprincipal;
+        }
+
+        img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        strong { 
+            color: $coulSecondaireDark2; 
+        }
+    }
+}
+
+/* =========================================
+   CARROUSEL FLIPPER (Images complètes)
+   ========================================= */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px; 
+    margin: 0 auto 25px auto;
+    border-radius: 8px;
+    overflow: hidden; 
+    background-color: #0b0b1a; /* Fond très sombre pour combler les bords vides */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+
+    .carousel-track {
+        display: flex;
+        align-items: center; 
+        transition: transform 0.4s ease-in-out; 
+        width: 100%;
+        
+        img {
+            width: 100%;
+            height: 400px; /* HAUTEUR FIXE POUR LE CARROUSEL */
+            object-fit: contain; /* FORCE L'IMAGE À S'AFFICHER EN ENTIER */
+            flex-shrink: 0; 
+            border-radius: 0;
+            margin-bottom: 0;
+            box-shadow: none;
+        }
+    }
+
+    .carousel-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.8); /* Fond un peu plus sombre pour bien voir les flèches */
+        color: white;
+        border: none;
+        font-size: 20px;
+        padding: 10px 15px;
+        cursor: pointer;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+        z-index: 2;
+
+        &:hover {
+            background-color: $coulPrincipalDark2;
+            color: $coulPrincipalDark1;
+        }
+
+        &.prev { left: 10px; }
+        &.next { right: 10px; }
+    }
+}
+/* =========================================
+   FOOTER
+   ========================================= */
+footer {
+    // Un fond très légèrement différent pour bien marquer la fin de page
+    background-color: rgba(0, 0, 0, 0.2); 
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 50px 20px 30px 20px;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+
+    p {
+        color: white;
+        font-family: $fontsecondaire;
+        margin: 0;
+        font-size: 1rem;
+        line-height: 1.5;
+
+        // Le dernier paragraphe (crédits) plus discret
+        &:last-of-type {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.5);
+            margin-top: 30px;
+        }
+    }
+
+    .contact-mail {
+        margin: 20px 0;
+
+        a {
+            display: inline-block;
+            font-family: $fontprincipal;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: $coulPrincipalDark2;
+            text-decoration: none;
+            padding: 12px 25px;
+            border: 2px solid $coulPrincipalDark2;
+            border-radius: $radiusbtn;
+            transition: all 0.3s ease;
+
+            // Effet au survol : fond rempli et texte sombre
+            &:hover {
+                background-color: $coulPrincipalDark2;
+                color: $coulPrincipalDark1;
+                transform: translateY(-3px);
+                box-shadow: 0 10px 20px rgba(250, 208, 0, 0.2);
+            }
+        }
+    }
 }
