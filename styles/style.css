@@ -36,6 +36,9 @@ body h4 {
   font-family: "Space Grotesk", sans-serif;
 }
 
+/* =========================================
+   NAVIGATION
+   ========================================= */
 nav {
   display: flex;
   flex-direction: row;
@@ -44,19 +47,78 @@ nav {
   align-items: center;
   width: 100%;
   text-align: center;
+  padding: 20px 0;
 }
 nav h1 {
   font-family: "Space Grotesk", sans-serif;
   font-weight: 700;
   font-style: normal;
+  font-size: 2rem;
+  margin: 0;
+  transition: font-size 0.3s ease;
 }
 nav .linkedin {
   margin-left: 13%;
+  transition: margin-left 0.3s ease;
+}
+nav .linkedin svg {
+  transition: width 0.3s ease, height 0.3s ease;
 }
 nav .github {
   margin-left: 50px;
+  transition: margin-left 0.3s ease;
+}
+nav .github svg {
+  transition: width 0.3s ease, height 0.3s ease;
+}
+nav {
+  /* --- RESPONSIVE TABLETTE --- */
+}
+@media screen and (max-width: 768px) {
+  nav h1 {
+    font-size: 1.5rem;
+  }
+  nav .linkedin {
+    margin-left: 8%;
+  }
+  nav .linkedin svg {
+    width: 35px;
+    height: 33px;
+  }
+  nav .github {
+    margin-left: 30px;
+  }
+  nav .github svg {
+    width: 34px;
+    height: 36px;
+  }
+}
+nav {
+  /* --- RESPONSIVE MOBILE --- */
+}
+@media screen and (max-width: 480px) {
+  nav h1 {
+    font-size: 1.2rem;
+  }
+  nav .linkedin {
+    margin-left: 5%;
+  }
+  nav .linkedin svg {
+    width: 26px;
+    height: 25px;
+  }
+  nav .github {
+    margin-left: 15px;
+  }
+  nav .github svg {
+    width: 26px;
+    height: 28px;
+  }
 }
 
+/* =========================================
+   HEADER
+   ========================================= */
 header {
   display: flex;
   margin: 0 auto;
@@ -65,6 +127,11 @@ header {
   flex-direction: column;
   width: 50%;
 }
+@media screen and (max-width: 768px) {
+  header {
+    width: 90%;
+  }
+}
 header img {
   width: auto;
   margin-left: 50px;
@@ -72,24 +139,38 @@ header img {
 @media screen and (max-width: 480px) {
   header img {
     width: 100%;
+    margin-left: 0;
   }
 }
-header h2 {
+header h2, header p {
   align-self: center;
+  text-align: center;
 }
 header p {
-  align-self: center;
   color: white;
-  text-align: center;
   line-height: 25px;
 }
 header section {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   gap: 20px;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 480px) {
+  header section {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+  header section button, header section a {
+    width: 100% !important;
+    max-width: 250px;
+  }
 }
 
+/* --- BOUTONS PRINCIPAUX --- */
 #btn_parcours {
   width: 150px;
   height: 40px;
@@ -224,18 +305,22 @@ header section {
   color: #A599E9;
   text-align: center;
 }
-#parcours-overlay .parcours-content .parcours-img-container, #parcours-overlay .connexing-content .parcours-img-container, #parcours-overlay .envoliis-content .parcours-img-container, #connexing-overlay .parcours-content .parcours-img-container, #connexing-overlay .connexing-content .parcours-img-container, #connexing-overlay .envoliis-content .parcours-img-container, #envoliis-overlay .parcours-content .parcours-img-container, #envoliis-overlay .connexing-content .parcours-img-container, #envoliis-overlay .envoliis-content .parcours-img-container {
+#parcours-overlay .parcours-content, #connexing-overlay .parcours-content, #envoliis-overlay .parcours-content {
+  height: 90%;
+  justify-content: center;
+}
+#parcours-overlay .parcours-content .parcours-img-container, #connexing-overlay .parcours-content .parcours-img-container, #envoliis-overlay .parcours-content .parcours-img-container {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 20px;
   margin-bottom: 20px;
 }
-#parcours-overlay .parcours-content .parcours-img-container img, #parcours-overlay .connexing-content .parcours-img-container img, #parcours-overlay .envoliis-content .parcours-img-container img, #connexing-overlay .parcours-content .parcours-img-container img, #connexing-overlay .connexing-content .parcours-img-container img, #connexing-overlay .envoliis-content .parcours-img-container img, #envoliis-overlay .parcours-content .parcours-img-container img, #envoliis-overlay .connexing-content .parcours-img-container img, #envoliis-overlay .envoliis-content .parcours-img-container img {
+#parcours-overlay .parcours-content .parcours-img-container img, #connexing-overlay .parcours-content .parcours-img-container img, #envoliis-overlay .parcours-content .parcours-img-container img {
   max-width: 200px;
   height: auto;
 }
-#parcours-overlay .parcours-content .parcours-img-container .bulle-texte, #parcours-overlay .connexing-content .parcours-img-container .bulle-texte, #parcours-overlay .envoliis-content .parcours-img-container .bulle-texte, #connexing-overlay .parcours-content .parcours-img-container .bulle-texte, #connexing-overlay .connexing-content .parcours-img-container .bulle-texte, #connexing-overlay .envoliis-content .parcours-img-container .bulle-texte, #envoliis-overlay .parcours-content .parcours-img-container .bulle-texte, #envoliis-overlay .connexing-content .parcours-img-container .bulle-texte, #envoliis-overlay .envoliis-content .parcours-img-container .bulle-texte {
+#parcours-overlay .parcours-content .parcours-img-container .bulle-texte, #connexing-overlay .parcours-content .parcours-img-container .bulle-texte, #envoliis-overlay .parcours-content .parcours-img-container .bulle-texte {
   color: #FE9B01;
   font-family: "Space Grotesk", sans-serif;
   font-size: 1.2rem;
@@ -246,17 +331,13 @@ header section {
   line-height: 1.4;
 }
 @media screen and (max-width: 480px) {
-  #parcours-overlay .parcours-content .parcours-img-container, #parcours-overlay .connexing-content .parcours-img-container, #parcours-overlay .envoliis-content .parcours-img-container, #connexing-overlay .parcours-content .parcours-img-container, #connexing-overlay .connexing-content .parcours-img-container, #connexing-overlay .envoliis-content .parcours-img-container, #envoliis-overlay .parcours-content .parcours-img-container, #envoliis-overlay .connexing-content .parcours-img-container, #envoliis-overlay .envoliis-content .parcours-img-container {
+  #parcours-overlay .parcours-content .parcours-img-container, #connexing-overlay .parcours-content .parcours-img-container, #envoliis-overlay .parcours-content .parcours-img-container {
     flex-direction: column;
     gap: 10px;
   }
-  #parcours-overlay .parcours-content .parcours-img-container .bulle-texte, #parcours-overlay .connexing-content .parcours-img-container .bulle-texte, #parcours-overlay .envoliis-content .parcours-img-container .bulle-texte, #connexing-overlay .parcours-content .parcours-img-container .bulle-texte, #connexing-overlay .connexing-content .parcours-img-container .bulle-texte, #connexing-overlay .envoliis-content .parcours-img-container .bulle-texte, #envoliis-overlay .parcours-content .parcours-img-container .bulle-texte, #envoliis-overlay .connexing-content .parcours-img-container .bulle-texte, #envoliis-overlay .envoliis-content .parcours-img-container .bulle-texte {
+  #parcours-overlay .parcours-content .parcours-img-container .bulle-texte, #connexing-overlay .parcours-content .parcours-img-container .bulle-texte, #envoliis-overlay .parcours-content .parcours-img-container .bulle-texte {
     text-align: center;
   }
-}
-#parcours-overlay .parcours-content, #connexing-overlay .parcours-content, #envoliis-overlay .parcours-content {
-  height: 90%;
-  justify-content: center;
 }
 #parcours-overlay .connexing-content, #parcours-overlay .envoliis-content, #connexing-overlay .connexing-content, #connexing-overlay .envoliis-content, #envoliis-overlay .connexing-content, #envoliis-overlay .envoliis-content {
   height: 50%;
@@ -321,6 +402,9 @@ header section {
   color: #FAD000;
   margin-bottom: 40px;
   font-size: 2rem;
+}
+#propos-overlay .propos-content {
+  /* Les cartes des soft skills (Créatif, Adaptation, Maîtrise) */
 }
 #propos-overlay .propos-content > div:nth-of-type(1),
 #propos-overlay .propos-content > div:nth-of-type(2),
@@ -448,6 +532,44 @@ header section {
 #propos-overlay .propos-content .btnfermer:hover {
   background-color: #FAD000;
 }
+#propos-overlay .propos-content {
+  /* --- RESPONSIVE MOBILE EXCLUSIF --- */
+}
+@media screen and (max-width: 480px) {
+  #propos-overlay .propos-content {
+    padding: 40px 15px 40px 15px;
+  }
+  #propos-overlay .propos-content > div:nth-of-type(1),
+  #propos-overlay .propos-content > div:nth-of-type(2),
+  #propos-overlay .propos-content > div:nth-of-type(3) {
+    flex: 1 1 100%;
+    max-width: 220px;
+    margin: 10px auto;
+    padding: 15px 10px;
+    gap: 10px;
+  }
+  #propos-overlay .propos-content > div:nth-of-type(1) svg,
+  #propos-overlay .propos-content > div:nth-of-type(2) svg,
+  #propos-overlay .propos-content > div:nth-of-type(3) svg {
+    width: 28px;
+    height: 28px;
+  }
+  #propos-overlay .propos-content > div:nth-of-type(1) h3,
+  #propos-overlay .propos-content > div:nth-of-type(2) h3,
+  #propos-overlay .propos-content > div:nth-of-type(3) h3 {
+    font-size: 1rem;
+  }
+  #propos-overlay .propos-content > p {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    text-align: center !important;
+  }
+  #propos-overlay .propos-content > p:nth-of-type(5),
+  #propos-overlay .propos-content > p:last-of-type,
+  #propos-overlay .propos-content > img:last-of-type {
+    display: none !important;
+  }
+}
 
 /* =========================================
    BOUTON FERMER GLOBAL (La Croix)
@@ -513,8 +635,15 @@ header section {
   border-radius: 16px;
   width: 340px;
   padding: 25px 20px;
+  box-sizing: border-box;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+@media screen and (max-width: 480px) {
+  .hardskills div {
+    width: 100%;
+    max-width: 340px;
+  }
 }
 .hardskills div:hover {
   transform: translateY(-10px);
@@ -563,36 +692,6 @@ header section {
   font-weight: 500;
 }
 
-.compacad {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  width: 90%;
-  margin: 20px auto;
-}
-.compacad button {
-  width: min(100%, 600px);
-  height: 75px;
-  font-family: "Montserrat", sans-serif;
-  background-color: #A599E9;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  align-content: center;
-  text-decoration: none;
-}
-.compacad button:hover {
-  background-color: rgb(127.9838709677, 111.0483870968, 223.9516129032);
-}
-.compacad button {
-  padding: 0 15px;
-}
-
 /* =========================================
    GRILLE DES PROJETS & CARDS
    ========================================= */
@@ -629,6 +728,7 @@ header section {
   border-radius: 16px;
   overflow: hidden;
   width: 280px;
+  max-width: 100%;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
@@ -669,7 +769,156 @@ header section {
 }
 
 /* =========================================
-   OVERLAYS DES PROJETS
+   CARROUSEL : MES PROJETS PRÉFÉRÉS
+   ========================================= */
+.carousel-intro {
+  margin: -10px auto 30px auto;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  max-width: 600px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  padding: 0 15px;
+}
+
+.favorite-carousel {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 50px auto;
+  position: relative;
+  padding: 20px 60px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(165, 153, 233, 0.1), rgba(19, 19, 39, 0.8));
+  border: 1px solid rgba(250, 208, 0, 0.15);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+}
+.favorite-carousel .carousel-track {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  width: 100%;
+}
+.favorite-carousel .carousel-track > .favorite-slide {
+  flex: 0 0 100%;
+  width: 100%;
+  background-color: transparent;
+  box-shadow: none;
+  margin: 0;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+.favorite-carousel .carousel-track > .favorite-slide:hover {
+  transform: translateY(-5px);
+}
+.favorite-carousel .carousel-track > .favorite-slide:hover img {
+  filter: brightness(1.05);
+}
+.favorite-carousel .carousel-track > .favorite-slide img {
+  height: 380px;
+  border-radius: 16px 16px 0 0;
+  border-bottom: 4px solid #FAD000;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: filter 0.3s ease;
+}
+.favorite-carousel .carousel-track > .favorite-slide .projet-info {
+  background: #A599E9;
+  border-radius: 0 0 16px 16px;
+  padding: 25px 20px;
+  text-align: center;
+}
+.favorite-carousel .carousel-track > .favorite-slide .projet-info h4 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+.favorite-carousel .carousel-track > .favorite-slide .projet-info p {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.favorite-carousel .carousel-btn {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(19, 19, 39, 0.9);
+  color: #FAD000;
+  border: 2px solid rgba(250, 208, 0, 0.3);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+.favorite-carousel .carousel-btn:hover {
+  background-color: #FAD000;
+  color: #131327;
+  transform: translateY(-50%) scale(1.1);
+}
+.favorite-carousel .carousel-btn.prev {
+  left: 10px;
+}
+.favorite-carousel .carousel-btn.next {
+  right: 10px;
+}
+
+#projet-borne-overlay .projet-overlay-content img,
+#projet-jukebox-overlay .projet-overlay-content img {
+  width: min(100%, 380px);
+  max-width: 380px;
+  max-height: 260px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+#projet-jukebox-overlay .projet-overlay-content img {
+  max-height: 220px;
+}
+
+/* --- RESPONSIVE CARROUSEL FAVORIS --- */
+@media screen and (max-width: 768px) {
+  .favorite-carousel {
+    padding: 15px 45px;
+  }
+  .favorite-carousel .carousel-track > .favorite-slide img {
+    height: 300px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .favorite-carousel {
+    padding: 10px;
+    background: none;
+    border: none;
+    box-shadow: none;
+  }
+  .favorite-carousel .carousel-track > .favorite-slide {
+    padding: 0;
+  }
+  .favorite-carousel .carousel-track > .favorite-slide img {
+    height: 220px;
+  }
+  .favorite-carousel .carousel-track > .favorite-slide .projet-info {
+    padding: 20px 15px;
+  }
+  .favorite-carousel .carousel-track > .favorite-slide .projet-info h4 {
+    font-size: 1.2rem;
+  }
+  .favorite-carousel .carousel-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+  .favorite-carousel .carousel-btn.prev {
+    left: 5px;
+  }
+  .favorite-carousel .carousel-btn.next {
+    right: 5px;
+  }
+  .carousel-intro {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+  }
+}
+/* =========================================
+   OVERLAYS DES PROJETS (Avec corrections Scroll)
    ========================================= */
 .overlay-projet {
   position: fixed;
@@ -703,7 +952,9 @@ header section {
   align-items: center;
   width: min(90%, 650px);
   max-height: 90vh;
-  overflow-y: auto;
+  box-sizing: border-box; /* CORRECTION SCROLL */
+  margin: auto; /* CORRECTION SCROLL */
+  overflow-y: auto; /* CORRECTION SCROLL */
   background-color: #131327;
   padding: 40px;
   border-radius: 12px;
@@ -724,6 +975,18 @@ header section {
   margin-bottom: 25px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
+.overlay-projet .projet-overlay-content {
+  /* Correction Responsive Vidéos YouTube/Twitch */
+}
+.overlay-projet .projet-overlay-content iframe {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
 .overlay-projet .projet-overlay-content p {
   font-size: 1.1rem;
   line-height: 1.6;
@@ -733,53 +996,60 @@ header section {
 .overlay-projet .projet-overlay-content strong {
   color: #FE9B01;
 }
+@media screen and (max-width: 480px) {
+  .overlay-projet .projet-overlay-content {
+    padding: 30px 15px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .overlay-projet {
+    align-items: flex-start;
+    padding: 5vh 0;
+  }
+}
 
 /* =========================================
-   CARROUSEL FLIPPER (Images complètes)
+   STYLE GLOBAL DES CARROUSELS MULTI-PROJETS (Modales)
    ========================================= */
 .carousel-container {
   position: relative;
   width: 100%;
-  max-width: 500px;
-  margin: 0 auto 25px auto;
-  border-radius: 8px;
+  max-width: 800px;
+  margin: 10px auto 25px auto;
   overflow: hidden;
-  background-color: #0b0b1a; /* Fond très sombre pour combler les bords vides */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  background-color: #0b0b1a;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 .carousel-container .carousel-track {
   display: flex;
-  align-items: center;
   transition: transform 0.4s ease-in-out;
   width: 100%;
+  align-items: center;
 }
 .carousel-container .carousel-track img {
   width: 100%;
-  height: 400px; /* HAUTEUR FIXE POUR LE CARROUSEL */
-  -o-object-fit: contain;
-     object-fit: contain; /* FORCE L'IMAGE À S'AFFICHER EN ENTIER */
   flex-shrink: 0;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin: 0;
   border-radius: 0;
-  margin-bottom: 0;
   box-shadow: none;
+  max-height: 400px; /* Sécurité pour ne pas casser la modale */
 }
 .carousel-container .carousel-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.8); /* Fond un peu plus sombre pour bien voir les flèches */
-  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #FAD000;
   border: none;
-  font-size: 20px;
   padding: 10px 15px;
   cursor: pointer;
+  font-size: 1.5rem;
+  z-index: 10;
   border-radius: 50%;
-  transition: all 0.3s ease;
-  z-index: 2;
-}
-.carousel-container .carousel-btn:hover {
-  background-color: #FAD000;
-  color: #131327;
+  transition: background-color 0.3s ease;
 }
 .carousel-container .carousel-btn.prev {
   left: 10px;
@@ -787,11 +1057,23 @@ header section {
 .carousel-container .carousel-btn.next {
   right: 10px;
 }
+.carousel-container .carousel-btn:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* =========================================
+   AJUSTEMENTS SPÉCIFIQUES DES PROJETS
+   ========================================= */
+#projet-flechette-overlay .projet-overlay-content img {
+  max-width: 250px; /* Réduit proprement l'image de la cible */
+}
 
 /* =========================================
    FOOTER
    ========================================= */
 footer {
+  width: 100%;
+  box-sizing: border-box;
   background-color: rgba(0, 0, 0, 0.2);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding: 50px 20px 30px 20px;
@@ -834,4 +1116,9 @@ footer .contact-mail a:hover {
   color: #131327;
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(250, 208, 0, 0.2);
+}
+
+button[data-target="#projet-flechette-overlay"] img {
+  -o-object-position: top;
+     object-position: top;
 }/*# sourceMappingURL=style.css.map */

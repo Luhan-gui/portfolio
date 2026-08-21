@@ -265,6 +265,7 @@
                 </section>
             </div>
         </section>
+        <!--
         <h3>Compétences Académiques</h3>
         <section class="compacad">
             <button class="btn-open-modal" data-target="#comp-dev-overlay">Réaliser un développement
@@ -278,19 +279,77 @@
             <button class="btn-open-modal" data-target="#comp-equipe-overlay">Travailler dans une équipe
                 informatique</button>
         </section>
+        -->
     </section>
 
     <section class="projet">
         <h2>Mon Portfolio</h2>
 
+        <h3>Mes Projets Préférés</h3>
+        <p class="carousel-intro">Une sélection des projets que j'aime le plus, à parcourir comme un carrousel.</p>
+        <div class="carousel-container favorite-carousel">
+            <div class="carousel-track">
+                <button class="btn-open-modal projet-card favorite-slide" data-target="#projet-borne-overlay">
+                    <img src="img/arcade.jpeg" alt="Borne d'arcade">
+                    <div class="projet-info">
+                        <h4>Borne d'Arcade</h4>
+                        <p>Linux & Hardware</p>
+                    </div>
+                </button>
+
+                <button class="btn-open-modal projet-card favorite-slide" data-target="#projet-pinball-overlay">
+                    <img src="img/frenchtouchpinball.jpg" alt="Flipper The Invaders">
+                    <div class="projet-info">
+                        <h4>Flipper The Invaders</h4>
+                        <p>French Touch Pinball</p>
+                    </div>
+                </button>
+
+                <button class="btn-open-modal projet-card favorite-slide" data-target="#projet-jukebox-overlay">
+                    <img src="img/jukebox.png" alt="Jukebox Apple Music">
+                    <div class="projet-info">
+                        <h4>Jukebox</h4>
+                        <p>Python & JavaScript</p>
+                    </div>
+                </button>
+
+                <button class="btn-open-modal projet-card favorite-slide" data-target="#projet-flechette-overlay">
+                    <img src="img/cible.jpeg" alt="Cible de fléchettes">
+                    <div class="projet-info">
+                        <h4>Setup Fléchette</h4>
+                        <p>Bricolage & Streaming OBS</p>
+                    </div>
+                </button>
+
+                <button class="btn-open-modal projet-card favorite-slide" data-target="#projet-a2f-overlay">
+                    <img src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Système d'A2F">
+                    <div class="projet-info">
+                        <h4>Système d'A2F</h4>
+                        <p>PHP & JS</p>
+                    </div>
+                </button>
+            </div>
+            <button class="carousel-btn prev" aria-label="Projet précédent">&#10094;</button>
+            <button class="carousel-btn next" aria-label="Projet suivant">&#10095;</button>
+        </div>
+
         <h3>Mes Projets Personnels</h3>
         <div class="projet-grid">
             <button class="btn-open-modal projet-card" data-target="#projet-borne-overlay">
-                <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                <img src="img/arcade.jpeg"
                     alt="Borne d'arcade">
                 <div class="projet-info">
                     <h4>Borne d'Arcade</h4>
                     <p>Linux & Hardware</p>
+                </div>
+            </button>
+            <button class="btn-open-modal projet-card" data-target="#projet-flechette-overlay">
+                <img src="img/cible.jpeg"
+                    alt="Cible de fléchettes">
+                <div class="projet-info">
+                    <h4>Setup Fléchette</h4>
+                    <p>Bricolage & Streaming OBS</p>
                 </div>
             </button>
 
@@ -316,6 +375,14 @@
                 <div class="projet-info">
                     <h4>Serveur Maison</h4>
                     <p>Docker & Réseau</p>
+                </div>
+            </button>
+            <button class="btn-open-modal projet-card" data-target="#projet-jukebox-overlay">
+                <img src="img/jukebox.png"
+                    alt="Jukebox">
+                <div class="projet-info">
+                    <h4>Jukebox Apple Music</h4>
+                    <p>Python & Javascript</p>
                 </div>
             </button>
         </div>
@@ -418,6 +485,15 @@
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             <p>J'ai également créer de zéro un PCB pour gérer des LEDs afin de produire des animations synchronisé avec
                 le flipper avec un code Micro-Python</p>
+            <div class="carousel-container">
+                <div class="carousel-track">
+                    <img src="img/pcb3D.png" alt="PCB 3D">
+                    <img src="img/pcbPiste.png" alt="PCB Piste">
+                </div>
+                <button class="carousel-btn prev">&#10094;</button>
+                <button class="carousel-btn next">&#10095;</button>
+            </div>
+            
         </div>
     </section>
 
@@ -447,15 +523,38 @@
                 </svg>
             </button>
             <h2>Borne d'Arcade</h2>
-            <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                alt="Borne Arcade">
-            <p>Conception et montage complet d'une borne d'arcade de zéro. Création des plans, choix des composants
-                électroniques et mécaniques, assemblage et configuration logicielle.<br>
-                Utilisation de boutons et joysticks
-                <strong>Sanwa</strong> et configuration logicielle sur carte <strong>Brook / Raspberry Pi Pico</strong>
-                pour garantir une latence minimale attendu pour un joueur de jeu de combat comme moi. (Je suis TEKKEN
-                EMPEROR si jamais 💪💪)
+            <img src="img/arcade.jpeg" alt="Borne Arcade">
+            <p>
+                Montage complet d'une borne d'arcade : assemblage de la menuiserie, choix minutieux des composants électroniques et mécaniques, et configuration logicielle avancée sur base Batocera (Linux).
             </p>
+            <p>
+                Loin d'une simple installation classique, j'ai transformé cette borne en un véritable projet d'ingénierie système intégrant des solutions sur mesure :
+            </p>
+            <ul style="text-align: left; margin: 15px 0; padding-left: 20px; line-height: 1.6;">
+                <li style="margin-bottom: 10px;"><strong>Hardware & Customisation :</strong> Utilisation de boutons et joysticks <strong>Sanwa</strong> reliés à une carte <strong>Brook / Raspberry Pi Pico 2040</strong> pour garantir une latence minimale, essentielle pour les jeux de combat. Programmation de profils de configuration (Pad-to-Key en JSON) pour traduire dynamiquement les entrées physiques en frappes clavier natives.</li>
+                <li style="margin-bottom: 10px;"><strong>Environnement Hybride (Linux/Windows) :</strong> Création de scripts Bash d'exécution sur-mesure pour encapsuler des exécutables natifs Windows (jeux DirectX) via <strong>Wine/Proton</strong> depuis l'interface Linux. Implémentation de <em>traps</em> (interception des signaux SIGTERM/SIGINT) pour forcer l'extinction asynchrone des processus orphelins et garantir la stabilité du système.</li>
+                <li style="margin-bottom: 10px;"><strong>Écosystème Steam & Synchronisation :</strong> Intégration de la version Flatpak de Steam directement dans l'interface (EmulationStation). Configuration de la synchronisation <strong>Steam Cloud</strong> pour la récupération transparente des sauvegardes, lancement direct des jeux de la bibliothèque PC, et gestion du panel d'arcade via Steam Input.</li>
+                <li style="margin-bottom: 10px;"><strong>Réseau & Cloud Gaming :</strong> Intégration native d'un tunnel VPN Mesh (<strong>Tailscale</strong>) couplé à une architecture de streaming <strong>Moonlight/Sunshine</strong> et du Wake-on-LAN, permettant de streamer des jeux contemporains très gourmands depuis une machine distante, sans latence perceptible.</li>
+                <li><strong>Administration Système :</strong> Utilisation avancée de l'interface en ligne de commande (SSH) sous Linux (gestion des transferts bit-à-bit asynchrones avec <code>dd</code>, manipulation de <code>nohup</code>, surveillance de logs en temps réel) pour le clonage système à bas niveau et la portabilité totale de la machine.</li>
+            </ul>
+        </div>
+    </section>
+    <section id="projet-jukebox-overlay" class="overlay-projet">
+        <div class="projet-overlay-content">
+            <button class="btnfermer" aria-label="Fermer la fenêtre">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </button>
+            <h2>Jukebox Apple Music</h2>
+            <img src="img/jukebox.png" alt="Jukebox">
+            <p>Développement d'un Jukebox pour Apple Music en utilisant l'API officielle d'Apple Music. L'application
+                permet de rechercher des morceaux, de les lire et de créer des playlists personnalisées.<br>
+                Le projet a été réalisé en <strong>Python</strong> pour le backend et en <strong>JavaScript</strong>
+                pour le frontend, offrant une interface utilisateur interactive et réactive.</p>
+                <a href="https://github.com/Luhan-gui/apple-jukebox" target="_blank" rel="noopener noreferrer"
+                style="color: #FE9B01; text-decoration: underline; font-weight: bold;">Voir le repo Github</a>
         </div>
     </section>
     <section id="projet-flipper-table-overlay" class="overlay-projet">
@@ -484,6 +583,30 @@
                 Le flipper a été conçu pour être transportable et facilement démontable.<br>
                 Nous avons participé avec mon équipe aux Olympiades des Sciences de l'Ingénieur, c'était une très bonne
                 expérience avec des choses à en tirer.</p>
+        </div>
+    </section>
+    <section id="projet-flechette-overlay" class="overlay-projet">
+        <div class="projet-overlay-content">
+            <button class="btnfermer" aria-label="Fermer la fenêtre">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </button>
+            <h2>Setup Fléchette Connecté</h2>
+            <img src="img/cible.jpeg"
+                alt="Setup de fléchettes connecté">
+            <p>
+                <strong>Création manuelle, intégration vidéo et régie de streaming.</strong><br><br>
+                Ce projet personnel allie travail manuel et configuration logicielle pour créer une véritable expérience de jeu connectée et interactive. J'ai entièrement conçu et fabriqué un <strong>meuble personnalisé sur mesure</strong> pour accueillir la cible, protéger les murs environnants et intégrer l'électronique proprement.<br><br>
+                <iframe 
+                    src="https://clips.twitch.tv/embed?clip=CulturedElatedWitchKappa-UpI985L-fkZS6gvb&parent=localhost&parent=medjed-dev.fr" 
+                    frameborder="0" 
+                    allowfullscreen="true" 
+                    scrolling="no">
+                </iframe>
+                Côté technique, j'ai mis en place une véritable petite régie vidéo. Le système repose sur une <strong>configuration avancée d'OBS Studio</strong> pour gérer différentes scènes et sources. L'installation intègre notamment le <strong>streaming direct depuis ma tablette</strong>, ce qui me permet de récupérer et d'incruster en temps réel l'affichage interactif des scores et des statistiques pendant les parties.
+            </p>
         </div>
     </section>
 
@@ -653,7 +776,7 @@
             </p>
         </div>
     </section>
-    <section id="comp-dev-overlay" class="overlay-projet">
+    <!-- <section id="comp-dev-overlay" class="overlay-projet">
         <div class="projet-overlay-content">
             <button class="btnfermer" aria-label="Fermer la fenêtre">
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -672,9 +795,9 @@
                 mise en place de tests unitaires rigoureux pour garantir la qualité de livraison.
             </p>
         </div>
-    </section>
+    </section> -->
 
-    <section id="comp-optim-overlay" class="overlay-projet">
+    <!-- <section id="comp-optim-overlay" class="overlay-projet">
         <div class="projet-overlay-content">
             <button class="btnfermer" aria-label="Fermer la fenêtre">
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -693,9 +816,9 @@
                 refactorisation de code existant pour rationaliser l'utilisation des ressources système.
             </p>
         </div>
-    </section>
+    </section> -->
 
-    <section id="comp-sys-overlay" class="overlay-projet">
+    <!-- <section id="comp-sys-overlay" class="overlay-projet">
         <div class="projet-overlay-content">
             <button class="btnfermer" aria-label="Fermer la fenêtre">
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -714,9 +837,9 @@
                 des architectures conteneurisées avec Docker pour l'hébergement d'applications.
             </p>
         </div>
-    </section>
+    </section> -->
 
-    <section id="comp-bdd-overlay" class="overlay-projet">
+    <!-- <section id="comp-bdd-overlay" class="overlay-projet">
         <div class="projet-overlay-content">
             <button class="btnfermer" aria-label="Fermer la fenêtre">
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -735,9 +858,9 @@
                 d'intégrité.
             </p>
         </div>
-    </section>
+    </section> -->
 
-    <section id="comp-projet-overlay" class="overlay-projet">
+    <!-- <section id="comp-projet-overlay" class="overlay-projet">
         <div class="projet-overlay-content">
             <button class="btnfermer" aria-label="Fermer la fenêtre">
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -755,9 +878,9 @@
                 planification de tâches comme Jira pour structurer l'avancement des livrables.
             </p>
         </div>
-    </section>
+    </section> -->
 
-    <section id="comp-equipe-overlay" class="overlay-projet">
+    <!-- <section id="comp-equipe-overlay" class="overlay-projet">
         <div class="projet-overlay-content">
             <button class="btnfermer" aria-label="Fermer la fenêtre">
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -776,7 +899,7 @@
                 et une communication transparente à travers des outils collaboratifs comme Microsoft Teams.
             </p>
         </div>
-    </section>
+    </section> -->
     <footer>
         <p>Merci de votre visite !</p>
         <p>Si jamais vous avez des questions, n'hésitez pas à me contacter par mail !</p>
@@ -827,37 +950,40 @@
         });
     });
 
-    // ==========================================
-    // 2. GESTION DU CARROUSEL FLIPPER DE TABLE
-    // ==========================================
-    const track = document.getElementById('flipper-track');
-    const btnPrev = document.getElementById('flipper-prev');
-    const btnNext = document.getElementById('flipper-next');
-    let currentIndex = 0;
+    const allCarousels = document.querySelectorAll('.carousel-container');
 
-    // On vérifie que le carrousel existe bien sur la page avant d'activer le code
-    if (track && btnPrev && btnNext) {
-        // On compte automatiquement combien d'images sont présentes dans le carrousel
-        const images = track.querySelectorAll('img');
-        const totalImages = images.length;
+    allCarousels.forEach(container => {
+        const track = container.querySelector('.carousel-track');
+        const btnPrev = container.querySelector('.carousel-btn.prev');
+        const btnNext = container.querySelector('.carousel-btn.next');
+        
+        if (track && btnPrev && btnNext) {
+            const slides = track.children;
+            const totalSlides = slides.length;
+            let currentIndex = 0;
 
-        // Fonction pour déplacer les images
-        const updateCarousel = () => {
-            track.style.transform = `translateX(-${currentIndex * 100}%)`;
-        };
+            const updateCarousel = () => {
+                const slideWidth = slides[0] ? slides[0].getBoundingClientRect().width : 0;
+                track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+            };
 
-        // Clic sur le bouton Suivant
-        btnNext.addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % totalImages;
             updateCarousel();
-        });
 
-        // Clic sur le bouton Précédent
-        btnPrev.addEventListener('click', () => {
-            currentIndex = (currentIndex - 1 + totalImages) % totalImages;
-            updateCarousel();
-        });
-    }
+            // Clic sur le bouton Suivant
+            btnNext.addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % totalSlides;
+                updateCarousel();
+            });
+
+            // Clic sur le bouton Précédent
+            btnPrev.addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+                updateCarousel();
+            });
+
+            window.addEventListener('resize', updateCarousel);
+        }
+    });
 </script>
 
 </html>
